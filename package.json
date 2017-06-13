@@ -1,0 +1,41 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "nuka-carousel": "^2.0.4",
+    "plaid": "^2.0.4",
+    "react": "^15.5.4",
+    "react-burger-menu": "^2.0.2",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.5",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
+    "redux": "^3.6.0",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-thunk": "^2.2.0",
+    "superagent": "^3.5.2"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.7"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:4000",
+  "description": "Alternative payment systems to Snapsepay: * https://www.quora.com/What-is-the-most-frictionless-and-inexpensive-way-to-send-ACH-payments-for-an-online-marketplace *",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Good-Cents/app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Good-Cents/app/issues"
+  },
+  "homepage": "https://github.com/Good-Cents/app#readme"
+}
