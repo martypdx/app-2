@@ -1,8 +1,7 @@
 import React from 'react';
-import { Switch, Route, Link, withRouter, Redirect } from 'react-router-dom';
-import PlaidAccountLink from '../Plaid/PlaidAccountLink';
+import {  Link } from 'react-router-dom';
 import saveYourWay from '../../photos/saveYourWay.jpg';
-import LandingPage from '../css/LandingPage.css';
+import '../css/LandingPage.css';
 
 function LandingPage() {
 
