@@ -1,7 +1,7 @@
 import React from 'react';
 import {  Link } from 'react-router-dom';
 import saveYourWay from '../../photos/saveYourWay.jpg';
-import '../css/LandingPage.css';
+import '../../css/LandingPage.css';
 
 function LandingPage() {
   return (
