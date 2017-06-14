@@ -25,13 +25,13 @@ export default class Example extends React.Component {
           <Collapse className="navbar-toggleable-md" isOpen={!this.state.collapsed}>
             <Nav navbar>
               <NavItem>
-                <NavLink href="/about">About</NavLink>
+                <NavLink href="/">About</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/auth/signup">Log In</NavLink>
+                <NavLink href="/auth/signin">Log In</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">Link Account</NavLink>
+                <NavLink href="/auth/signup">Create Account</NavLink>
               </NavItem>
             </Nav>
           </Collapse>

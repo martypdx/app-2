@@ -12,12 +12,11 @@
   height:350px;
   line-height: 25px;
   font-family: helvetica;
+  
 }
 
 .welcomeHome p{
-  max-width: 500px;
-  padding-left: 400px;
- 
+text-align: center;
 }
 
 .dash-trailing:after {
@@ -27,6 +26,5 @@
     height: 6px;
     margin-bottom: 15px;
     margin-top: 15px;
-    width: 40px;
-   margin-left: 650px;
+    width: 40px; 
 }
