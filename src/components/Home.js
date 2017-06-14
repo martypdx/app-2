@@ -1,17 +1,38 @@
 import React, { Component } from 'react';
 import PlaidAccountLink from './Plaid/PlaidAccountLink';
 import saveYourWay from '../photos/saveYourWay.jpg';
+import styled from 'styled-components';
 import '../css/Home.css';
+import SetGoal from './SetGoal';
+var ProgressBar = require('progressbar.js');
 
 class Home extends Component {
+  constructor () {
+    super();
+    this.state = {
+
+    };
+    this.barHandler = this.barHandler.bind(this);
+  }
+  barHandler () {
+    var circle = new ProgressBar.Line('.progress', {
+      color: '#FCB03C',
+      duration: 3000,
+      easing: 'easeOut'
+    });
+    circle.animate(1);
+  }
+
   render() {
     return (
       <div className="Home">
-        <img src={saveYourWay} alt="backpack" />
-        <div className="welcomeHome">
-          <h2 className="dash-trailing">This Is Good Cents.</h2>
-          <p>One taste silent disco beltane, patchouli retreat. Tahini Hafiz tofu, ancient toxins rites of passage surrender chia seeds natural homebirth om Dr. Bronner's. Doula ecstatic dance transformative solstice third eye midwifery higher cosmic force medical marijuana papyrus font, organic raw cacao. Namaste. A Simple Shared account helps you and your partner easily budget, save, and talk about money. In good financial partnership, one plus one can equal anything.</p>
+        <div className="BabyNav">
+          <h3>Set Goal</h3>
+          <h3>Explore</h3>
+          <h3>My Goals</h3>
+          {/*<div className="progress" id="progress"></div>*/}
         </div>
+        <SetGoal/>
       </div>
     );
   }

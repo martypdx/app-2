@@ -3,6 +3,7 @@ import './css/App.css';
 import NavBar from './components/NavBar';
 import LandingPage from './components/Main/LandingPage';
 import Onboard from './components/Onboard';
+import About from './components/About';
 import Home from './components/Home';
 import Auth from './components/Main/Auth';
 import {
