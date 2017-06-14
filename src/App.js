@@ -4,7 +4,6 @@ import NavBar from './components/NavBar';
 import LandingPage from './components/Main/LandingPage';
 import About from './components/About';
 import Auth from './components/Main/Auth';
-import About from './components/About';
 import {
   BrowserRouter as Router,
   Route, 
