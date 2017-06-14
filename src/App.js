@@ -3,6 +3,7 @@ import './css/App.css';
 import NavBar from './components/NavBar';
 import LandingPage from './components/Main/LandingPage';
 import About from './components/About';
+import Home from './components/Home';
 import Auth from './components/Main/Auth';
 import {
   BrowserRouter as Router,
@@ -21,6 +22,7 @@ class App extends Component {
             <Route exact path="/" component={LandingPage} />
             <Route path="/auth" render={() => <Auth/>}/>
             <Route path="/about" component={About} />
+            <Route path="/home" component={Home} />
           </Switch>
         </div>
       </Router>
