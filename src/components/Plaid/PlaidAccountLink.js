@@ -1,7 +1,7 @@
 /* globals Plaid */
 import React from 'react';
 import { linkAccount } from './actions';
-import store from '../../containers/store';
+import store from '../../stores/store';
 
 const handler = Plaid.create({
   apiVersion: 'v2',
