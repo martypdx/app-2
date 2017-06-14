@@ -2,7 +2,7 @@
   margin: 15vh 0px;
 }
 .backpack {
-  width: 100%;
+  width: 90%;
 }
 .welcomeHome{
   background-color: rgb(252, 239, 229);
@@ -12,12 +12,15 @@
   height:350px;
   line-height: 25px;
   font-family: helvetica;
+  margin: 0 auto;
 }
 
 .welcomeHome p{
-  max-width: 500px;
-  padding-left: 400px;
- 
+text-align: center;
+}
+
+.dash-trailing{
+  padding-top: 40px;
 }
 
 .dash-trailing:after {
@@ -27,6 +30,10 @@
     height: 6px;
     margin-bottom: 15px;
     margin-top: 15px;
-    width: 40px;
-   margin-left: 650px;
+    width: 40px; 
+    margin: 0 auto;
+}
+
+.landing-text{
+  font-size: 24px;
 }
