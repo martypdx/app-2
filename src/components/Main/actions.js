@@ -52,3 +52,7 @@ export function signin(credentials) {
       });
   };
 }
+
+export function signout() {
+  return { type: action.LOGOUT };
+}
