@@ -3,8 +3,8 @@ import saveYourWay from '../photos/saveYourWay.jpg';
 import styled from 'styled-components';
 import '../css/Home.css';
 import SetGoal from './SetGoal';
-import {Redirect, withRouter} from 'react-router';
-import {connect} from 'react-redux';
+import { Redirect, withRouter } from 'react-router';
+import { connect } from 'react-redux';
 var ProgressBar = require('progressbar.js');
 
 class Home extends Component {
@@ -42,5 +42,5 @@ class Home extends Component {
 
 export default withRouter(connect(
   state => ({
-    accounts: state.accounts
+    accounts: state.user.plaid.accounts
   }))(Home));

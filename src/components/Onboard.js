@@ -37,5 +37,5 @@ function Onboard({ user, accounts, linking, location }) {
 export default withRouter(connect(
   state => ({
     linking: state.linking,
-    accounts: state.accounts
+    accounts: state.user.plaid.accounts
   }))(Onboard));
