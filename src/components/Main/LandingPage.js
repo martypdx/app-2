@@ -4,7 +4,6 @@ import saveYourWay from '../../photos/saveYourWay.jpg';
 import '../css/LandingPage.css';
 
 function LandingPage() {
-
   return (
     <div className="Home">
       <img src={saveYourWay} alt="backpack" />

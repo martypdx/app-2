@@ -5,11 +5,10 @@ import { signin, signup } from './actions';
 import Credentials from './Credentials';
 
 function Auth({ user, signin, signup, error, location, token }) {
-  if (user) return <Redirect to="/about"/>;
+  if (user) return <Redirect to="/onboard"/>;
   return (
     <div>
       Sign into your account!
-      <div>Token: {token}</div>
       <Switch>
         <Route path="/auth/signin" component={() => (
           <div>

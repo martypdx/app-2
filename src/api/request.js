@@ -1,4 +1,4 @@
-import store from '../containers/store';
+import store from '../stores/store';
 import superagent from 'superagent';
 
 let token = '';
@@ -20,7 +20,7 @@ const wrap = cmd => cmd
   .then(
   r => r.body,
   ({ response }) => {
-    throw response.body.error;
+    throw response.body ? response.body.error : response.text;
   }
   );
 
