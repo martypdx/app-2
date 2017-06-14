@@ -1,15 +1,26 @@
-import React from 'react';
-import Transaction from './Transaction';
+import React, { Component } from 'react';
+import plaidAPI from '../../api/plaidAPI';
+import '../../css/Transactions.css';
+class Transactions extends Component {
+  constructor () {
+    super();
+    this.state = {
 
-export default function Transactions({ transactions }) {
-  return (
-    <div>
-      <ul>
-        {transactions.map((transaction, i) => <Transaction
-          key={i}
-          {...transaction}
-        />)}
-      </ul>
-    </div>
-  );
+    };
+  }
+  
+  ComponentDidMount () {
+    console.log('yoyo');
+  }
+
+  render () {
+    return (
+      <div className="Transactions">
+        <h1 className="headers">My Hittas</h1>
+
+      </div>
+    );  
+  }
 }
+
+export default Transactions;
