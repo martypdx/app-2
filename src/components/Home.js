@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import saveYourWay from '../photos/saveYourWay.jpg';
 import styled from 'styled-components';
 import '../css/Home.css';
 import SetGoal from './SetGoal';
