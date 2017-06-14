@@ -8,8 +8,8 @@ import { Redirect } from 'react-router-dom';
 
 import '../css/About.css';
 
-function Onboard() {
-  // if (accounts) return <Redirect to="/home"/>;
+function Onboard({ user, accounts, location }) {
+  if (accounts) return <Redirect to="/home"/>;
   return (
     <div>
       <Carousel className="About">

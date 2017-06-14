@@ -1,7 +1,7 @@
 import plaidAPI from '../../api/plaidAPI';
 
-const LINK_ACCOUNT = 'LINK_ACCOUNT';
-const LINKING_ACCOUNT = 'LINKING_ACCOUNT';
+export const LINK_ACCOUNT = 'LINK_ACCOUNT';
+export const LINKING_ACCOUNT = 'LINKING_ACCOUNT';
 
 export function linkAccount(public_token) {
   return dispatch => {
@@ -13,3 +13,4 @@ export function linkAccount(public_token) {
       .catch(err => console.log(err));
   };
 }
+

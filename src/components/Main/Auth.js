@@ -9,7 +9,6 @@ function Auth({ user, signin, signup, error, location, token }) {
   return (
     <div>
       Sign into your account!
-      <div>Token: {token}</div>
       <Switch>
         <Route path="/auth/signin" component={() => (
           <div>

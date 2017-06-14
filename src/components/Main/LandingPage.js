@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route, Link, withRouter, Redirect } from 'react-router-dom';
-import PlaidAccountLink from '../Plaid/PlaidAccountLink';
+import { Link } from 'react-router-dom';
 import saveYourWay from '../../photos/saveYourWay.jpg';
 
 class LandingPage extends Component {
