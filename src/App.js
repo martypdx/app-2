@@ -6,6 +6,7 @@ import Onboard from './components/Onboard';
 import About from './components/About';
 import Home from './components/Home';
 import Auth from './components/Main/Auth';
+import Transactions from './components/HomeViews/Transactions';
 import {
   BrowserRouter as Router,
   Route,
@@ -27,6 +28,7 @@ function App({ user, accounts }) {
           {accounts &&
             <Route path="/home" component={Home} />
           }
+          <Route path="/transactions" component={Transactions} />
         </Switch>
       </div>
     </Router>
