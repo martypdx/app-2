@@ -4,12 +4,14 @@ import Goals from '../photos/illustration-home-goal.png';
 import ATM from '../photos/illustrationATM.png';
 import WithYou from '../photos/illustrationWithYou.png';
 import PlaidAccountLink from './Plaid/PlaidAccountLink';
+import Loading from './Main/Loading';
 import { withRouter, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import '../css/About.css';
 
-function Onboard({ user, accounts, location }) {
+function Onboard({ user, accounts, linking, location }) {
+  if (linking) return <Loading/>;
   if (accounts) return <Redirect to="/home" />;
   return (
     <div>
@@ -34,5 +36,6 @@ function Onboard({ user, accounts, location }) {
 
 export default withRouter(connect(
   state => ({
+    linking: state.linking,
     accounts: state.accounts
   }))(Onboard));

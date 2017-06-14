@@ -26,6 +26,17 @@ function token(state = null, action) {
   }
 }
 
+function linking(state = false, action) {
+  switch (action.type) {
+    case plaidActions.LINKING_ACCOUNT:
+      return true;
+    case plaidActions.LINK_ACCOUNT:
+      return false;
+    default:
+      return state;
+  }
+}
+
 function accounts(state = null, action) {
   switch (action.type) {
     case plaidActions.LINK_ACCOUNT:
@@ -38,6 +49,7 @@ function accounts(state = null, action) {
 const rootReducer = combineReducers({
   user,
   token,
+  linking,
   accounts
 });
 
