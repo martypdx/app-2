@@ -1,26 +1,28 @@
 import React, { Component } from 'react';
-import plaidAPI from '../../api/plaidAPI';
 import '../../css/Transactions.css';
-class Transactions extends Component {
-  constructor () {
-    super();
-    this.state = {
+import { connect } from 'react-redux';
+import { getTransactions } from '../Plaid/actions';
 
-    };
-  }
+
+class Transactions extends Component {
   
-  ComponentDidMount () {
-    console.log('yoyo');
+  componentDidMount () {
+    this.props.getTransactions(this.props.user.plaid.access_token);
   }
 
   render () {
     return (
       <div className="Transactions">
-        <h1 className="headers">My Hittas</h1>
+        <h1 className="headers">Transactions</h1>
 
       </div>
     );  
   }
 }
 
-export default Transactions;
+export default connect(
+  state => ({ user: state.user }),
+  dispatch => ({
+    getTransactions() { dispatch(getTransactions()); }
+  })
+)(Transactions);

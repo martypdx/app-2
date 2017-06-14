@@ -46,11 +46,21 @@ function accounts(state = null, action) {
   }
 }
 
+function transactions(state = null, action) {
+  switch (action.type) {
+    case plaidActions.GOT_TRANSACTIONS:
+      return action.payload;
+    default:
+      return state;
+  }
+}
+
 const rootReducer = combineReducers({
   user,
   token,
   linking,
-  accounts
+  accounts,
+  transactions
 });
 
 export default rootReducer;

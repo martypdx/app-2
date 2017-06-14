@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import '../css/Home.css';
 import SetGoal from './SetGoal';
+import Transactions from './HomeViews/Transactions';
 import { Redirect, withRouter } from 'react-router';
 import { connect } from 'react-redux';
+import { checkForToken } from './Main/actions';
 var ProgressBar = require('progressbar.js');
 
 class Home extends Component {
@@ -23,8 +25,8 @@ class Home extends Component {
   }
 
   render() {
-    const { accounts } = this.props;
-    if (!accounts) return <Redirect to="/" />;
+    const { user } = this.props;
+    if (!user) return <Redirect to="/" />;
     return (
       <div className="Home">
         <div className="BabyNav">
@@ -34,12 +36,20 @@ class Home extends Component {
           {/*<div className="progress" id="progress"></div>*/}
         </div>
         <SetGoal />
+        <Transactions />
       </div>
     );
   }
 }
 
+// export default withRouter(connect(
+//   state => ({
+//     accounts: state.user.plaid.accounts
+//   }))(Home));
+
 export default withRouter(connect(
-  state => ({
-    accounts: state.user.plaid.accounts
-  }))(Home));
+  state => ({ user: state.user }),
+  dispatch => ({
+    checkForToken() { dispatch(checkForToken()); }
+  })
+)(Home));
