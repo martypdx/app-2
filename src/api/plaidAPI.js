@@ -1,26 +1,11 @@
-const API_URL = '/api/plaid';
+import { request } from './request';
 
 export default {
-  getAccessToken(publicToken) {
-    return fetch(`${API_URL}/get_access_token`, {
-      method: 'POST',
-      body: JSON.stringify({ public_token: publicToken }),
-      headers: new Headers({ 'Content-Type': 'application/json' })
-
-    })
-      .then(res => res.json());
-  },
-
-  postAccessToken() {
-    return fetch(`${API_URL}/get-access-token`)
-      .then(res => res.json());
+  postAccessToken(token) {
+    return request.post('/me/accounts', { public_token: token });
   },
 
   postTransactions() {
-    return fetch(`${API_URL}/transactions`, {
-      method: 'POST',
-      headers: new Headers({ 'Content-Type': 'application/json' })
-    })
-      .then(res => res.json());
+    return request.get('/transactions');
   }
 };

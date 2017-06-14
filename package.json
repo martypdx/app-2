@@ -37,5 +37,13 @@
   "bugs": {
     "url": "https://github.com/Good-Cents/app/issues"
   },
-  "homepage": "https://github.com/Good-Cents/app#readme"
+  "homepage": "https://github.com/Good-Cents/app#readme",
+  "keywords": [
+    "Front-end",
+    "application",
+    "for",
+    "Good",
+    "Cents",
+    "API"
+  ]
 }

@@ -20,7 +20,7 @@ const wrap = cmd => cmd
   .then(
   r => r.body,
   ({ response }) => {
-    throw response.body.error;
+    throw response.body ? response.body.error : response.text;
   }
   );
 

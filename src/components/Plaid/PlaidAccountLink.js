@@ -1,6 +1,7 @@
 /* globals Plaid */
 import React from 'react';
-import plaidAPI from '../../api/plaidAPI';
+import { linkAccount } from './actions';
+import store from '../../containers/store';
 
 const handler = Plaid.create({
   apiVersion: 'v2',
@@ -9,8 +10,7 @@ const handler = Plaid.create({
   product: ['transactions'],
   key: process.env.REACT_APP_PLAID_PUBLIC_KEY,
   onSuccess: function (public_token) {
-    plaidAPI.getAccessToken(public_token)
-      .then(res => console.log('res:', res));
+    store.dispatch(linkAccount(public_token));
   },
   onExit: function (err, metadata) {
     console.log('Error: ', err, metadata);
@@ -20,8 +20,7 @@ const handler = Plaid.create({
 export default function PlaidAccountLink() {
   return (
     <div>
-      Welcome to Good Cents! Link your bank account below:
-        <button onClick={() => handler.open()}>Link Bank Account</button>
+      <button onClick={() => handler.open()}>Link Bank Account</button>
     </div>
   );
 }

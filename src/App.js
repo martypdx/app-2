@@ -2,30 +2,30 @@ import React, { Component } from 'react';
 import './css/App.css';
 import NavBar from './components/NavBar';
 import LandingPage from './components/Main/LandingPage';
-import About from './components/About';
+import Onboard from './components/Onboard';
 import Auth from './components/Main/Auth';
 import {
   BrowserRouter as Router,
-  Route, 
+  Route,
   Switch
 } from 'react-router-dom';
-// import UserTransactions from './Plaid/UserTransactions';
+import { connect } from 'react-redux';
 
-class App extends Component {
-  render() {
-    return (
-      <Router>
-        <div className="App">
-          <NavBar />
-          <Switch>
-            <Route exact path="/" component={LandingPage} />
-            <Route path="/auth" render={() => <Auth/>}/>
-            <Route path="/about" component={About} />
-          </Switch>
-        </div>
-      </Router>
-    );
-  }
+function App({ user }) {
+  return (
+    <Router>
+      <div className="App">
+        <NavBar />
+        <Switch>
+          <Route exact path="/" component={LandingPage} />
+          <Route path="/auth" render={() => <Auth />} />
+          {user &&
+            <Route path="/onboard" component={Onboard} />
+          }
+        </Switch>
+      </div>
+    </Router>
+  );
 }
 
-export default App;
+export default connect(state => ({ user: state.user }))(App);
