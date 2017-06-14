@@ -13,7 +13,6 @@
   line-height: 25px;
   font-family: helvetica;
   margin: 0 auto;
-  
 }
 
 .welcomeHome p{
@@ -33,4 +32,8 @@ text-align: center;
     margin-top: 15px;
     width: 40px; 
     margin: 0 auto;
+}
+
+.landing-text{
+  font-size: 24px;
 }
