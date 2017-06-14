@@ -1,9 +1,13 @@
+.NavBar-Wrapper{
+ opacity: .2;
+}
+
 .NavBar {
     background-color: white;
     height: 15vh;
     width: 100%;
     position: fixed;
-    top: 0px;
+    top:0px;
     z-index: 1;
 }
 
@@ -14,6 +18,7 @@
 }
 
 .ListContainer li{
+    opacity:1;
   display:inline-block;
   text-decoration: none;
   padding: 0px 20px;
