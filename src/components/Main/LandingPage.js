@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Switch, Route, Link, withRouter, Redirect } from 'react-router-dom';
 import PlaidAccountLink from '../Plaid/PlaidAccountLink';
 import saveYourWay from '../../photos/saveYourWay.jpg';
 
@@ -11,6 +12,16 @@ class LandingPage extends Component {
           <h2 className="dash-trailing">This Is Good Cents.</h2>
           <p>One taste silent disco beltane, patchouli retreat. Tahini Hafiz tofu, ancient toxins rites of passage surrender chia seeds natural homebirth om Dr. Bronner's. Doula ecstatic dance transformative solstice third eye midwifery higher cosmic force medical marijuana papyrus font, organic raw cacao. Namaste. A Simple Shared account helps you and your partner easily budget, save, and talk about money. In good financial partnership, one plus one can equal anything.</p>
         </div>
+        <p>
+          <Link className="navButton" to="auth/signin">
+            Sign In
+        </Link>
+        </p>
+        <p>
+          <Link className="navButton" to="auth/signup">
+            Create An Account
+        </Link>
+        </p>
       </div>
     );
   }
