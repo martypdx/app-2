@@ -23,8 +23,8 @@
 .navLogo{
   padding: 10px;
   float: left;
-  max-width: 25vh;
-  max-height: 10vh;
+  max-width: 10vh;
+  height: 20vh;
 }
 
 .navButton{

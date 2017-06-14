@@ -18,6 +18,7 @@
     "superagent": "^3.5.2"
   },
   "devDependencies": {
+    "progressbar.js": "^1.0.1",
     "react-scripts": "1.0.7"
   },
   "scripts": {
