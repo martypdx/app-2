@@ -9,7 +9,6 @@ export default function NavBar() {
   if (window.innerWidth < 500) return <MobileNav />;
 
   return (
-    <div className="NavBar-Wrapper">
       <div className="NavBar">
         {/*<img src={pigLogo} className="navLogo" alt="logo" />*/}
         <ul className="ListContainer">
@@ -19,7 +18,6 @@ export default function NavBar() {
           <Link to="/auth/signup"><li className="navButton">Create Account</li></Link>
         </ul>
       </div>
-    </div>
   );
 }
 
