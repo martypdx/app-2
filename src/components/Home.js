@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
-import PlaidAccountLink from './Plaid/PlaidAccountLink';
-import saveYourWay from '../photos/saveYourWay.jpg';
 import styled from 'styled-components';
 import '../css/Home.css';
 import SetGoal from './SetGoal';
+import { Redirect, withRouter } from 'react-router';
+import { connect } from 'react-redux';
 var ProgressBar = require('progressbar.js');
 
 class Home extends Component {
-  constructor () {
-    super();
-    this.state = {
+  constructor(props) {
+    super(props);
 
-    };
     this.barHandler = this.barHandler.bind(this);
   }
-  barHandler () {
+
+  barHandler() {
     var circle = new ProgressBar.Line('.progress', {
       color: '#FCB03C',
       duration: 3000,
@@ -24,6 +23,8 @@ class Home extends Component {
   }
 
   render() {
+    const { accounts } = this.props;
+    if (!accounts) return <Redirect to="/" />;
     return (
       <div className="Home">
         <div className="BabyNav">
@@ -32,10 +33,13 @@ class Home extends Component {
           <h3>My Goals</h3>
           {/*<div className="progress" id="progress"></div>*/}
         </div>
-        <SetGoal/>
+        <SetGoal />
       </div>
     );
   }
 }
 
-export default Home;
+export default withRouter(connect(
+  state => ({
+    accounts: state.user.plaid.accounts
+  }))(Home));

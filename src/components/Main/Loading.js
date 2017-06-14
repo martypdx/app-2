@@ -1,9 +1,10 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
 
 export default function Loading({ user, accounts }) {
-  if (accounts) return <Redirect to="/home" />;
   return (
-    <div>LOADING...</div>
+    <div>
+      <h2 style={{ color: 'red' }}>LOADING...</h2>
+      <p style={{ color: 'red' }}>Average Load Time: 10 seconds</p>
+    </div>
   );
 }

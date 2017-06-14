@@ -14,7 +14,7 @@ import {
 } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-function App({ user, accounts }) {
+function App({ user, linking, accounts }) {
   return (
     <Router>
       <div className="App">
@@ -25,9 +25,7 @@ function App({ user, accounts }) {
           {user &&
             <Route path="/onboard" component={Onboard} />
           }
-          {accounts &&
-            <Route path="/home" component={Home} />
-          }
+          <Route path="/home" component={Home} />
           <Route path="/transactions" component={Transactions} />
         </Switch>
       </div>
