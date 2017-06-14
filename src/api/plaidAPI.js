@@ -5,7 +5,7 @@ export default {
     return request.post('/me/accounts', { public_token: token });
   },
 
-  postTransactions(token) {
-    return request.post('/transactions', { access_token: token });
+  getTransactions(token) {
+    return request.get('/me/transactions');
   }
 };

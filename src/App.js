@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component}from 'react';
 import './css/App.css';
 import NavBar from './components/NavBar';
 import LandingPage from './components/Main/LandingPage';
@@ -7,30 +7,44 @@ import About from './components/About';
 import Home from './components/Home';
 import Auth from './components/Main/Auth';
 import Transactions from './components/HomeViews/Transactions';
+import { checkForToken } from './components/Main/actions';
 import {
   BrowserRouter as Router,
   Route,
+  withRouter,
   Switch
 } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-function App({ user, linking, accounts }) {
-  return (
-    <Router>
-      <div className="App">
-        <NavBar />
-        <Switch>
-          <Route exact path="/" component={LandingPage} />
-          <Route path="/auth" render={() => <Auth />} />
-          {user &&
-            <Route path="/onboard" component={Onboard} />
-          }
-          <Route path="/home" component={Home} />
-          <Route path="/transactions" component={Transactions} />
-        </Switch>
-      </div>
-    </Router>
-  );
+class App extends Component{
+
+  componentDidMount() {
+    this.props.checkForToken();
+  }
+
+  render () {
+    const {user} = this.props; 
+    return (
+      <Router>
+        <div className="App">
+          <NavBar />
+          <Switch>
+            <Route exact path="/" component={LandingPage} />
+            <Route path="/auth" render={() => <Auth />} />
+            {user &&
+              <Route path="/onboard" component={Onboard} />
+            }
+            <Route path="/home" component={Home} />
+          </Switch>
+        </div>
+      </Router>
+    );
+  }
 }
 
-export default connect(state => ({ user: state.user }))(App);
+export default connect(
+  state => ({ user: state.user }),
+  dispatch => ({ 
+    checkForToken() { dispatch(checkForToken()); }  
+  })
+)(App);

@@ -2,6 +2,24 @@ import * as action from './constants';
 import authAPI from '../../api/authAPI';
 import { getStoredToken } from '../../api/request';
 
+export function checkForToken() {
+  return dispatch => {
+    const token = getStoredToken();
+    if (!token) return;
+
+    dispatch({ type: action.GOT_TOKEN, payload: token });
+
+    authAPI.verify()
+      .then(() => authAPI.getUser())
+      .then(user => {
+        dispatch({ type: action.ADDED_USER, payload: user });
+      })
+      .catch(error => {
+        dispatch({ type: action.AUTH_FAILED, payload: error });
+      });
+  };
+}
+
 export function signup(user) {
   return dispatch => {
     authAPI.signup(user)
@@ -34,4 +52,3 @@ export function signin(credentials) {
       });
   };
 }
-

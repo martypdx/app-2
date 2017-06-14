@@ -3,7 +3,7 @@ import superagent from 'superagent';
 
 let token = '';
 
-const storage = sessionStorage;
+const storage = localStorage;
 store.subscribe(() => {
   const { token: newToken } = store.getState();
   if (newToken !== token) {
@@ -11,6 +11,8 @@ store.subscribe(() => {
     token ? storage.token = token : storage.clear('token');
   }
 });
+
+// localStorage.setItem('token', token);
 
 export const getStoredToken = () => storage.token;
 export const API_URL = '/api';
