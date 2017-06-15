@@ -6,7 +6,6 @@ import { connect } from 'react-redux';
 import { signout } from './Main/actions';
 import GOODCENTS from '../photos/GOODCENTS.svg';
 
-
 class Example extends React.Component {
   constructor(props) {
     super(props);
