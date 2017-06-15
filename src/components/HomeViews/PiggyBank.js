@@ -1,5 +1,5 @@
 import React from 'react';
-import piglogo from '../../photos/pigLogo.png'
+import piglogo from '../../photos/pigLogo.png';
 import { connect } from 'react-redux';
 
 function PiggyBank({ piggybank }) {
