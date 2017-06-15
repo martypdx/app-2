@@ -37,7 +37,7 @@ function Onboard({ user, accounts, linking, location }) {
         <div>
           <img src={WithYou} alt="WithYou" />
           <h2>Ready to get started?</h2>
-          <p>Click below to link your bank account.</p>
+          <p className="onboard-text">Click below to link your bank account.</p>
           <PlaidAccountLink />
         </div>
       </Carousel>
