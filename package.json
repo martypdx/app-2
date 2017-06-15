@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.6",
+    "halogen": "^0.2.0",
     "nuka-carousel": "^2.0.4",
     "plaid": "^2.0.4",
     "react": "^15.6.0",

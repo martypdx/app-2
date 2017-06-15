@@ -6,7 +6,6 @@ import Onboard from './components/Onboard';
 import About from './components/About';
 import Home from './components/Home';
 import Auth from './components/Main/Auth';
-import Transactions from './components/HomeViews/Transactions';
 import { checkForToken } from './components/Main/actions';
 import {
   BrowserRouter as Router,
@@ -16,8 +15,7 @@ import {
 } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-class App extends Component{
-
+class App extends Component {
   componentDidMount() {
     this.props.checkForToken();
   }
