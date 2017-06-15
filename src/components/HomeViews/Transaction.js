@@ -1,10 +1,10 @@
 import React from './react';
 
-export default function Transaction({ name, description }) {
+export default function Transaction({ name, amount }) {
   return (
     <div>
       <h2>{name}</h2>
-      <p>{description}</p>
+      <p>{amount}</p>
     </div>
   );
 }

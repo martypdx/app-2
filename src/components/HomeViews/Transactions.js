@@ -3,7 +3,6 @@ import '../../css/Transactions.css';
 import { connect } from 'react-redux';
 import { getTransactions } from '../Plaid/actions';
 
-
 class Transactions extends Component {
   
   componentDidMount () {
@@ -21,7 +20,10 @@ class Transactions extends Component {
 }
 
 export default connect(
-  state => ({ user: state.user }),
+  state => ({ 
+    user: state.user,
+    transactions: state.transactions 
+  }),
   dispatch => ({
     getTransactions() { dispatch(getTransactions()); }
   })

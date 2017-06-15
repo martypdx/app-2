@@ -3,23 +3,33 @@ import { Switch, Route, Link, withRouter, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { signin, signup } from './actions';
 import Credentials from './Credentials';
+import Cents from '../../photos/cents.png';
+import '../../css/About.css';
 
 function Auth({ user, signin, signup, error, location, token }) {
-  if (user) return <Redirect to="/onboard"/>;
+  if (user) return <Redirect to="/onboard" />;
   return (
-    <div>
-      Sign into your account!
+    <div className="About">
+      <img src={Cents} alt="Cents" />
       <Switch>
         <Route path="/auth/signin" component={() => (
           <div>
-            <p>Not yet registered? <Link to="/auth/signup">Sign Up</Link></p>
+            <h2>Sign into your account here:</h2>
             <Credentials submit={signin} />
+            <p>Not yet registered? <Link to="/auth/signup">Sign Up</Link></p>
+            {error &&
+              <div>{error}</div>
+            }
           </div>
         )} />
         <Route path="/auth/signup" render={() => (
           <div>
-            <p>Already have an account? <Link to="/auth/signin">Sign In</Link></p>
+            <h2>Welcome! Create your account here:</h2>
             <Credentials submit={signup} allowName={true} />
+            <p>Already have an account? <Link to="/auth/signin">Sign In</Link></p>
+            {error &&
+              <div>{error}</div>
+            }
           </div>
         )} />
       </Switch>
@@ -29,7 +39,7 @@ function Auth({ user, signin, signup, error, location, token }) {
 
 export default withRouter(connect(
   state => ({
-    error: state.authError,
+    error: state.error,
     user: state.user
   }),
   dispatch => ({

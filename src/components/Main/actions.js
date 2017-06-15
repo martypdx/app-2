@@ -1,4 +1,5 @@
 import * as action from './constants';
+import * as plaidAction from '../Plaid/actions';
 import authAPI from '../../api/authAPI';
 import { getStoredToken } from '../../api/request';
 
@@ -45,6 +46,7 @@ export function signin(credentials) {
       .then(() => authAPI.getUser())
       .then(user => {
         dispatch({ type: action.ADDED_USER, payload: user });
+        dispatch({ type: plaidAction.LINK_ACCOUNT, payload: user.plaid.accounts });
       },
       error => {
         dispatch({ type: action.AUTH_FAILED, payload: error });

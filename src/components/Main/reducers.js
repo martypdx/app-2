@@ -2,6 +2,18 @@ import * as actions from './constants';
 import { combineReducers } from 'redux';
 import * as plaidActions from '../Plaid/actions';
 
+function error(state = null, action) {
+  switch (action.type) {
+    case actions.AUTH_FAILED:
+      return action.payload;
+    case actions.ADDED_USER:
+    case actions.LOGOUT:
+      return null;
+    default:
+      return state;
+  }
+}
+
 function user(state = null, action) {
   switch (action.type) {
     case actions.ADDED_USER:
@@ -41,6 +53,9 @@ function accounts(state = null, action) {
   switch (action.type) {
     case plaidActions.LINK_ACCOUNT:
       return action.payload;
+    case actions.LOGOUT:
+    case actions.AUTH_FAILED:
+      return null;
     default:
       return state;
   }
@@ -50,6 +65,9 @@ function transactions(state = null, action) {
   switch (action.type) {
     case plaidActions.GOT_TRANSACTIONS:
       return action.payload;
+    case actions.LOGOUT:
+    case actions.AUTH_FAILED:
+      return null;
     default:
       return state;
   }
@@ -60,7 +78,8 @@ const rootReducer = combineReducers({
   token,
   linking,
   accounts,
-  transactions
+  transactions,
+  error
 });
 
 export default rootReducer;
