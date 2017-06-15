@@ -2,8 +2,18 @@ import * as actions from './constants';
 import { combineReducers } from 'redux';
 import * as plaidActions from '../Plaid/actions';
 
-//TODO: Add the LINKED_ACCOUNT to this reducer, so it changes the user obj in state
-// Do not return action.payload; turns user into accounts
+function error(state = null, action) {
+  switch (action.type) {
+    case actions.AUTH_FAILED:
+      return action.payload;
+    case actions.ADDED_USER:
+    case actions.LOGOUT:
+      return null;
+    default:
+      return state;
+  }
+}
+
 function user(state = null, action) {
   switch (action.type) {
     case actions.ADDED_USER:
@@ -68,7 +78,8 @@ const rootReducer = combineReducers({
   token,
   linking,
   accounts,
-  transactions
+  transactions,
+  error
 });
 
 export default rootReducer;
