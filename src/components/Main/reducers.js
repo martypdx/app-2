@@ -73,11 +73,21 @@ function transactions(state = null, action) {
   }
 }
 
+function piggyBank(state = 0, action) {
+  switch (action.type) {
+    case actions.ADD_TRANSACTIONS:
+      return action.payload;
+    default:
+      return state;
+  }
+}
+
 const rootReducer = combineReducers({
   user,
   token,
   linking,
   accounts,
+  piggyBank,
   transactions,
   error
 });
