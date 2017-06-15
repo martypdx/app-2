@@ -4,8 +4,10 @@ import '../css/NavBar.css';
 import MobileNav from './MobileNav';
 import { Link } from 'react-router-dom';
 import { nameOfAnimation as Menu } from 'react-burger-menu';
+import {connect} from 'react-redux';
+import {signout} from './Main/actions';
 
-export default function NavBar({ user, signout }) {
+function NavBar({ user, signout }) {
   if (window.innerWidth < 500) return <MobileNav />;
 
   return (
@@ -23,5 +25,12 @@ export default function NavBar({ user, signout }) {
     </div>
   );
 }
+
+export default connect(
+  state => ({ user: state.user }),
+  dispatch => ({
+    signout() { dispatch(signout()); }
+  })
+)(NavBar)
 
 
