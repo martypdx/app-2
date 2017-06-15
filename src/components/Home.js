@@ -11,32 +11,38 @@ import {
 } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { checkForToken } from './Main/actions';
-var ProgressBar = require('progressbar.js');
+
 
 class Home extends Component {
   constructor(props) {
     super(props);
 
-    this.barHandler = this.barHandler.bind(this);
-  }
-
-  barHandler() {
-    var circle = new ProgressBar.Line('.progress', {
-      color: '#FCB03C',
-      duration: 3000,
-      easing: 'easeOut'
-    });
-    circle.animate(1);
   }
 
   render() {
     const { user } = this.props;
+
     if (!user) return <Redirect to="/" />;
     return (
       <section>
-        <PiggyBank />
-        <Link to='/cashout'><button className="mainButton">Ready to Cash Out?</button></Link>
-        <Transactions />
+        <div className="Home">
+          <div className="PiggyContainer">
+            <PiggyBank />
+          </div>
+          <div className="UserContainer">
+            <div className="UserBox"></div>
+            <div className="ButtonsContainer">
+              <div className="ButtonsBox"><Link to='/cashout'><button className="mainButton">Ready to Cash Out?</button></Link></div>
+              <div className="ButtonsBox"></div>
+            </div>
+          </div>
+          <div className="LineGraphContainer">
+            
+          </div>
+          <div className="TransactionsContainer">
+            <Transactions />
+          </div>
+        </div>
       </section>
     );
   }
