@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { signin, signup } from './actions';
 import Credentials from './Credentials';
 import Cents from '../../photos/cents.png';
-import '../../css/About.css';
+import '../../css/Onboard.css';
 
 function Auth({ user, signin, signup, error, location, token }) {
   if (user) return <Redirect to="/onboard" />;

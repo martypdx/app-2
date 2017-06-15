@@ -1,6 +1,6 @@
 import React from 'react';
 import Loader from 'halogen/ClipLoader';
-import '../../css/About.css';
+import '../../css/Onboard.css';
 
 export default function Loading({ user, accounts }) {
   return (
