@@ -12,7 +12,7 @@ import '../css/About.css';
 
 function Onboard({ user, accounts, linking, location }) {
   if (linking) return <Loading/>;
-  if (accounts) return <Redirect to="/home" />;
+  if (user && accounts) return <Redirect to="/home" />;
   return (
     <div>
       <Carousel className="About">
@@ -36,6 +36,7 @@ function Onboard({ user, accounts, linking, location }) {
 
 export default withRouter(connect(
   state => ({
+    user: state.user,
     linking: state.linking,
-    accounts: state.user.plaid.accounts
+    accounts: state.accounts
   }))(Onboard));

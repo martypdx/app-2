@@ -13,8 +13,8 @@ export function checkForToken() {
       .then(() => authAPI.getUser())
       .then(user => {
         dispatch({ type: action.ADDED_USER, payload: user });
-      })
-      .catch(error => {
+      },
+      error => {
         dispatch({ type: action.AUTH_FAILED, payload: error });
       });
   };
@@ -23,17 +23,16 @@ export function checkForToken() {
 export function signup(user) {
   return dispatch => {
     authAPI.signup(user)
-    .then(({ token }) => {
-      dispatch({ type: action.GOT_TOKEN, payload: token });
-    })
-    .then(() => authAPI.getUser())
-    .then(user => {
-      dispatch({ type: action.ADDED_USER, payload: user });
-    })
-    .catch(error => {
-      console.log('Error: ', error);
-      dispatch({ type: action.AUTH_FAILED, payload: error});
-    });
+      .then(({ token }) => {
+        dispatch({ type: action.GOT_TOKEN, payload: token });
+      })
+      .then(() => authAPI.getUser())
+      .then(user => {
+        dispatch({ type: action.ADDED_USER, payload: user });
+      },
+      error => {
+        dispatch({ type: action.AUTH_FAILED, payload: error });
+      });
   };
 }
 
@@ -46,9 +45,13 @@ export function signin(credentials) {
       .then(() => authAPI.getUser())
       .then(user => {
         dispatch({ type: action.ADDED_USER, payload: user });
-      })
-      .catch(error => {
+      },
+      error => {
         dispatch({ type: action.AUTH_FAILED, payload: error });
       });
   };
+}
+
+export function signout() {
+  return { type: action.LOGOUT };
 }
