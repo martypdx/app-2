@@ -29,14 +29,24 @@ class Home extends Component {
     if (!user) return <Redirect to="/" />;
     return (
       <div className="Home">
-        <div className="BabyNav">
-          <h3>Set Goal</h3>
-          <h3>Explore</h3>
-          <h3>My Goals</h3>
-          {/*<div className="progress" id="progress"></div>*/}
+        <div className="PiggyContainer">
+
         </div>
-        <SetGoal />
-        <Transactions />
+        <div className="UserContainer">
+          <div className="UserBox"></div>
+          <div className="ButtonsContainer">
+            <div className="ButtonsBox"></div>
+            <div className="ButtonsBox"></div>
+          </div>
+        </div>
+
+        <div className="LineGraphContainer">
+
+        </div>
+        <div className="TransactionsContainer">
+
+        </div>
+        
       </div>
     );
   }
