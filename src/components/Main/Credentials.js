@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../css/About.css';
 
 export default ({ submit, allowName = false }) => (
   <form onSubmit={e => {
@@ -11,10 +12,10 @@ export default ({ submit, allowName = false }) => (
     submit(data);
   }}>
     {allowName &&
-      <label>name: <input name="name" /></label>
+      <label className="sign-in-label">name: <input name="name" /></label>
     }
-    <label>email: <input name="email" /></label>
-    <label>password: <input type="password" name="password" /></label>
+    <label className="sign-in-label">email: <input name="email" /></label>
+    <label className="sign-in-label">password: <input type="password" name="password" /></label>
     <button>Log In</button>
   </form>
 );
