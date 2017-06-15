@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import '../css/Home.css';
 import SetGoal from './SetGoal';
 import Transactions from './HomeViews/Transactions';
+import PiggyBank from './HomeViews/PiggyBank';
 import { Redirect, withRouter } from 'react-router';
 import { connect } from 'react-redux';
 import { checkForToken } from './Main/actions';
@@ -30,7 +31,7 @@ class Home extends Component {
     return (
       <div className="Home">
         <div className="PiggyContainer">
-
+          <Piggybank />
         </div>
         <div className="UserContainer">
           <div className="UserBox"></div>
@@ -39,12 +40,9 @@ class Home extends Component {
             <div className="ButtonsBox"></div>
           </div>
         </div>
-
         <div className="LineGraphContainer">
-
         </div>
         <div className="TransactionsContainer">
-
         </div>
         
       </div>
