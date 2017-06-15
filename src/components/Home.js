@@ -29,23 +29,27 @@ class Home extends Component {
     const { user } = this.props;
     if (!user) return <Redirect to="/" />;
     return (
-      <div className="Home">
-        <div className="PiggyContainer">
-          <Piggybank />
-        </div>
-        <div className="UserContainer">
-          <div className="UserBox"></div>
-          <div className="ButtonsContainer">
-            <div className="ButtonsBox"></div>
-            <div className="ButtonsBox"></div>
+      <section>
+        <div className="Home">
+          <div className="PiggyContainer">
+            <PiggyBank />
+          </div>
+          <div className="UserContainer">
+            <div className="UserBox"></div>
+            <div className="ButtonsContainer">
+              <div className="ButtonsBox"></div>
+              <div className="ButtonsBox"></div>
+            </div>
+          </div>
+          <div className="LineGraphContainer">
+          </div>
+          <div className="TransactionsContainer">
           </div>
         </div>
-        <div className="LineGraphContainer">
+        <div>
+          <Transactions />
         </div>
-        <div className="TransactionsContainer">
-        </div>
-        
-      </div>
+      </section>
     );
   }
 }

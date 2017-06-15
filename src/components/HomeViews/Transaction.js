@@ -1,11 +1,11 @@
 import React from 'react';
+import '../../css/Transactions.css';
 
-export default function Transaction({ name, amount, date }) {
+export default function Transaction({ name, amount, date, cents }) {
   return (
     <div>
-      <h2>{name}</h2>
-      <p>{amount}</p>
-      <p>{date}</p>
+      <h5>{name}</h5>
+      <p>${amount} / {date} / You earned ${cents.toFixed(2)} cents.</p>
     </div>
   );
 }

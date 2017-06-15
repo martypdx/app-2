@@ -5,30 +5,32 @@ import { getTransactions } from '../Plaid/actions';
 import Transaction from './Transaction';
 
 class Transactions extends Component {
-  
-  componentWillMount () {
+
+  componentWillMount() {
     this.props.getTransactions(this.props.user.plaid.access_token);
   }
 
-  render () {
+  render() {
     return (
       <div className="Transactions">
-        <h1 className="headers">Transactions</h1>
-        { this.props.transactions && 
-        this.props.transactions.map((trans, i) => {
-          return <Transaction
-          key={i} 
-          {...trans} />;
-        })}
+        <h1>Transactions</h1>
+        <ul className="applist">
+          {this.props.transactions &&
+            this.props.transactions.map((trans, i) => {
+              return <Transaction
+                key={i}
+                {...trans} />;
+            })}
+        </ul>
       </div>
-    );  
+    );
   }
 }
 
 export default connect(
-  state => ({ 
+  state => ({
     user: state.user,
-    transactions: state.transactions 
+    transactions: state.transactions
   }),
   dispatch => ({
     getTransactions() { dispatch(getTransactions()); }
