@@ -30,10 +30,15 @@ class Home extends Component {
             <PiggyBank />
           </div>
           <div className="UserContainer">
-            <div className="UserBox"></div>
+            <div className="UserBox">
+              <h2>{user.name}</h2>
+              <h3>{user.email}</h3>
+            </div>
             <div className="ButtonsContainer">
-              <div className="ButtonsBox"><Link to='/cashout'><button className="mainButton">Ready to Cash Out?</button></Link></div>
-              <div className="ButtonsBox"></div>
+              <div className="ButtonsBox"><Link to='/cashout'><button className="mainButton">Ready to Donate?</button></Link></div>
+              <div className="ButtonsBox">
+                <button className="mainButton">Deposit to Savings</button>
+              </div>
             </div>
           </div>
           <div className="LineGraphContainer">

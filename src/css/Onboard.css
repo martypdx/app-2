@@ -61,12 +61,18 @@ div .slider-decorator-0 {
     font-size: 15px;
     font-family: "CalibreSemibold", helvetica, sans-serif;
     letter-spacing: 0.5px;
-    max-height: 40px;
+    height: 10vw;
     line-height: 40px;
-    padding: 10px, 25px;
+    padding: 10px, 50px;
     text-transform: capitalize;
     border: none;
     border-radius: 5px;
+}
+
+.mainButton:hover {
+    background: #ffffff;
+    color: #0d97ff;
+    border: 3px solid #0d97ff;
 }
 
 @media only screen and (max-width: 600px) {
