@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "halogen": "^0.2.0",
     "nuka-carousel": "^2.0.4",
     "plaid": "^2.0.4",
     "react": "^15.6.0",
@@ -15,11 +16,9 @@
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
     "reactnav": "^2.0.0",
-    "reactstrap": "^4.6.2",
     "redux": "^3.6.0",
     "redux-devtools-extension": "^2.13.2",
     "redux-thunk": "^2.2.0",
-    "styled-components": "^2.0.1",
     "superagent": "^3.5.2"
   },
   "devDependencies": {
