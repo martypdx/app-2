@@ -1,11 +1,11 @@
 .footer {
-  background-color: lightgrey;
-  height: 200px;
-  min-height: 100px;
+  background-color: rgb(252, 251, 249);
+  height: 150px;
+  min-height: 30%;
   width: 100%;
   padding: 10vh 0 10vh 0;
   font-family: helvetica;
-  color: #f2f2f2;
+  color: rgb(51, 62, 72);;
 }
 
 .footerNavigation {

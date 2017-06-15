@@ -20,6 +20,12 @@
  
 }
 
+.ListContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .navLogo{
   max-width: 25%;
   height: auto;
