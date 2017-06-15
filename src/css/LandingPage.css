@@ -28,6 +28,7 @@ font-family: 'Source Sans Pro', sans-serif;
 .welcomeHome p{
 font-family: 'Source Sans Pro', sans-serif;
 text-align: center;
+margin:25px;
 }
 
 .money{
@@ -58,6 +59,14 @@ font-size: 15px;
 .item-icons {
 width: 10%;
 margin:20px;
+}
+
+.arrow{
+  margin:30px;
+}
+
+.burger {
+  margin:60px;
 }
 
 .hard-sell{
