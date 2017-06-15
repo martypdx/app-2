@@ -9,6 +9,8 @@ function user(state = null, action) {
     case actions.LOGOUT:
     case actions.AUTH_FAILED:
       return null;
+    case plaidActions.LINK_ACCOUNT:
+      return action.payload;
     default:
       return state;
   }
@@ -41,6 +43,9 @@ function accounts(state = null, action) {
   switch (action.type) {
     case plaidActions.LINK_ACCOUNT:
       return action.payload;
+    case actions.LOGOUT:
+    case actions.AUTH_FAILED:
+      return null;
     default:
       return state;
   }
@@ -50,6 +55,9 @@ function transactions(state = null, action) {
   switch (action.type) {
     case plaidActions.GOT_TRANSACTIONS:
       return action.payload;
+    case actions.LOGOUT:
+    case actions.AUTH_FAILED:
+      return null;
     default:
       return state;
   }
