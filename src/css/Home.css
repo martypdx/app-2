@@ -29,6 +29,7 @@
   height: 30vw;
   width: 45vw;
   margin: 8px 8px;
+
 }
 
 .UserBox {
@@ -36,6 +37,15 @@
   height: 15vw;
   width: 45vw;
   margin: 8px 8px;
+  color: #0d97ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.UserBox h2 {
+  font-size: 5em;
 }
 
 .ButtonsBox {
@@ -43,6 +53,9 @@
   height: 15vw;
   width: 22vw;
   margin: 5px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .ButtonsContainer {
@@ -64,3 +77,4 @@
   margin: 30px 8px;
   padding: 2vh;
 }
+

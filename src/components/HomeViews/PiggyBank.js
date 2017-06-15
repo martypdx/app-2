@@ -12,14 +12,14 @@ class PiggyBank extends Component {
       // This has to be the same size as the maximum width to
       // prevent clipping
       strokeWidth: 20,
-      trailWidth: 20,
+      trailWidth: 5,
       easing: 'easeInOut',
       duration: 1400,
       text: {
         autoStyleContainer: false
       },
       from: { color: '#0d97ff', width: 1 },
-      to: { color: '#0d97ff', width: 20 },
+      to: { color: '#0d97ff', width:5 },
       // Set default step function for all animate calls
       step: function (state, circle) {
         circle.path.setAttribute('stroke', state.color);
@@ -29,7 +29,7 @@ class PiggyBank extends Component {
         if (value === 0) {
           circle.setText('');
         } else {
-          circle.setText(value);
+          circle.setText("You've Saved");
         }
 
       }
@@ -44,7 +44,10 @@ class PiggyBank extends Component {
       <div>
         {/*<img src={piglogo} className="backpack" alt="backpack" />*/}
         <div id='container'>
-          <p>${piggybank.toFixed(2)}</p>
+          <p style={{
+            color: '#0d97ff',
+            fontSize: '2em',
+          }}>${piggybank.toFixed(2)}</p>
         </div>
       </div>
     );
