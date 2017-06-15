@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import '../../css/Transactions.css';
 import { connect } from 'react-redux';
 import { getTransactions } from '../Plaid/actions';
+import Transaction from './Transaction';
 
 class Transactions extends Component {
   
-  componentDidMount () {
+  componentWillMount () {
     this.props.getTransactions(this.props.user.plaid.access_token);
   }
 
@@ -13,7 +14,12 @@ class Transactions extends Component {
     return (
       <div className="Transactions">
         <h1 className="headers">Transactions</h1>
-
+        { this.props.transactions && 
+        this.props.transactions.map((trans, i) => {
+          return <Transaction
+          key={i} 
+          {...trans} />;
+        })}
       </div>
     );  
   }

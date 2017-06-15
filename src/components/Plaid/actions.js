@@ -1,5 +1,5 @@
 import plaidAPI from '../../api/plaidAPI';
-
+import * as action from '../Main/constants';
 export const LINK_ACCOUNT = 'LINK_ACCOUNT';
 export const LINKING_ACCOUNT = 'LINKING_ACCOUNT';
 export const GOT_TRANSACTIONS = 'GOT_TRANSACTIONS';
@@ -18,8 +18,25 @@ export function linkAccount(public_token) {
 export function getTransactions(access_token) {
   return dispatch => {
     plaidAPI.getTransactions(access_token)
-      .then(transactions => {
-        dispatch({ type: GOT_TRANSACTIONS, payload: transactions});
+      .then(res => {
+        let total = 0;
+        let trans = res.transactions.map(trans => {
+          let start = trans.amount; 
+          let end = Math.ceil(trans.amount);
+          let cents = end - start; 
+          total += cents;
+          return {
+            name: trans.name,
+            amount: trans.amount,
+            cents: cents,
+            date: trans.date,
+          };
+        });
+
+        dispatch({ type: GOT_TRANSACTIONS, 
+          payload: trans});
+        dispatch({ type: action.ADD_TRANSACTIONS, 
+          payload: total});
       })
       .catch(err => console.log(err));
   };
