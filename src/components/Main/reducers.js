@@ -78,6 +78,7 @@ function piggybank(state = 0, action) {
     case actions.ADD_TRANSACTIONS:
       return action.payload;
     case actions.AUTH_FAILED:
+    case plaidActions.CASH_OUT:
       return 0;
     default:
       return state;

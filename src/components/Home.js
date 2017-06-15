@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 import '../css/Home.css';
 import SetGoal from './SetGoal';
+import Contribution from './HomeViews/Contribution';
 import Transactions from './HomeViews/Transactions';
 import PiggyBank from './HomeViews/PiggyBank';
-import { Redirect, withRouter } from 'react-router';
+import {
+  Redirect,
+  Route,
+  Link,
+  withRouter
+} from 'react-router-dom';
 import { connect } from 'react-redux';
 import { checkForToken } from './Main/actions';
 var ProgressBar = require('progressbar.js');
@@ -30,25 +35,10 @@ class Home extends Component {
     if (!user) return <Redirect to="/" />;
     return (
       <section>
-        <div className="Home">
-          <div className="PiggyContainer">
-            <PiggyBank />
-          </div>
-          <div className="UserContainer">
-            <div className="UserBox"></div>
-            <div className="ButtonsContainer">
-              <div className="ButtonsBox"></div>
-              <div className="ButtonsBox"></div>
-            </div>
-          </div>
-          <div className="LineGraphContainer">
-          </div>
-          <div className="TransactionsContainer">
-          </div>
-        </div>
-        <div>
-          <Transactions />
-        </div>
+        <PiggyBank />
+        <Link to='/cashout'><p>Ready to Cash Out?</p></Link>
+        <Route path='/cashout' component={Contribution} />
+        <Transactions />
       </section>
     );
   }

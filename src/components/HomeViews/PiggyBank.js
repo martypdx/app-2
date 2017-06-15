@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 function PiggyBank({ piggybank }) {
   return (
     <div>
-      {/*<img src={piglogo} className="backpack" alt="backpack" />*/}
+      <img src={piglogo} className="backpack" alt="backpack" />
       <div>${piggybank.toFixed(2)}</div>
     </div>
   );
