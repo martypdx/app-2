@@ -6,6 +6,7 @@ import LandingPage from './components/Main/LandingPage';
 import Onboard from './components/Onboard';
 import Home from './components/Home';
 import Auth from './components/Main/Auth';
+import Contribution from './components/HomeViews/Contribution';
 import { checkForToken } from './components/Main/actions';
 import {
   BrowserRouter as Router,
@@ -32,6 +33,7 @@ class App extends Component {
               <Route path="/onboard" component={Onboard} />
             }
             <Route path="/home" component={Home} />
+            <Route path='/cashout' component={Contribution} />
           </Switch>
           <Footer />
         </div>

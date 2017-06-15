@@ -36,7 +36,6 @@ class Home extends Component {
       <section>
         <PiggyBank />
         <Link to='/cashout'><button className="mainButton">Ready to Cash Out?</button></Link>
-        <Route path='/cashout' component={Contribution} />
         <Transactions />
       </section>
     );
