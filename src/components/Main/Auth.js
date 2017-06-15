@@ -7,7 +7,7 @@ import Cents from '../../photos/cents.png';
 import '../../css/About.css';
 
 function Auth({ user, signin, signup, error, location, token }) {
-  if (user) return <Redirect to="/onboard"/>;
+  if (user) return <Redirect to="/onboard" />;
   return (
     <div className="About">
       <img src={Cents} alt="Cents" />
@@ -27,6 +27,9 @@ function Auth({ user, signin, signup, error, location, token }) {
           </div>
         )} />
       </Switch>
+      {error &&
+        <div>{error}</div>
+      }
     </div>
   );
 }
