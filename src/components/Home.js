@@ -28,6 +28,7 @@ class Home extends Component {
         <div className="Home">
           <div className="PiggyContainer">
             <PiggyBank />
+          </div>
             <div className="UserContainer">
               <div className="UserBox"></div>
               <div className="ButtonsContainer">
@@ -36,12 +37,10 @@ class Home extends Component {
               </div>
             </div>
             <div className="LineGraphContainer">
-
             </div>
             <div className="TransactionsContainer">
               <Transactions />
             </div>
-          </div>
         </div>
       </section>
     );

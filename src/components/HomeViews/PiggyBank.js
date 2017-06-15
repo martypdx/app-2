@@ -5,7 +5,7 @@ var ProgressBar = require('progressbar.js');
 
 class PiggyBank extends Component {
 
-  componentDidMount({ piggybank } ) {
+  componentDidMount() {
 
     var bar = new ProgressBar.Circle('#container', {
       color: '#0d97ff',

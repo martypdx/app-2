@@ -10,7 +10,7 @@ export function linkAccount(public_token) {
     dispatch({ type: LINKING_ACCOUNT });
     plaidAPI.postAccessToken(public_token)
       .then(accounts => {
-        dispatch({ type: LINK_ACCOUNT, payload: accounts});
+        dispatch({ type: LINK_ACCOUNT, payload: accounts });
       })
       .catch(err => console.log(err));
   };
@@ -22,7 +22,7 @@ export function getTransactions(access_token) {
       .then(res => {
         let total = 0;
         let trans = res.transactions.map(trans => {
-          let start = trans.amount; 
+          let start = trans.amount;
           let end = Math.ceil(trans.amount);
           let cents = end - start;
           total += cents;
@@ -34,16 +34,22 @@ export function getTransactions(access_token) {
           };
         });
 
-        dispatch({ type: GOT_TRANSACTIONS, 
-          payload: trans});
-        dispatch({ type: action.ADD_TRANSACTIONS, 
-          payload: total});
+        dispatch({
+          type: GOT_TRANSACTIONS,
+          payload: trans
+        });
+        dispatch({
+          type: action.ADD_TRANSACTIONS,
+          payload: total
+        });
       })
       .catch(err => console.log(err));
   };
 }
 
 export function cashingOut() {
-  return { type: CASH_OUT };
+  return dispatch => {
+    setTimeout(() => dispatch({type: CASH_OUT}), 5000);
+  };
 }
 
