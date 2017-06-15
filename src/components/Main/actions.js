@@ -13,8 +13,8 @@ export function checkForToken() {
       .then(() => authAPI.getUser())
       .then(user => {
         dispatch({ type: action.ADDED_USER, payload: user });
-      })
-      .catch(error => {
+      },
+      error => {
         dispatch({ type: action.AUTH_FAILED, payload: error });
       });
   };
@@ -23,13 +23,13 @@ export function checkForToken() {
 export function signup(user) {
   return dispatch => {
     authAPI.signup(user)
-    .then(({ token }) => {
-      dispatch({ type: action.GOT_TOKEN, payload: token });
-    })
-    .then(() => authAPI.getUser())
-    .then(user => {
-      dispatch({ type: action.ADDED_USER, payload: user });
-    },
+      .then(({ token }) => {
+        dispatch({ type: action.GOT_TOKEN, payload: token });
+      })
+      .then(() => authAPI.getUser())
+      .then(user => {
+        dispatch({ type: action.ADDED_USER, payload: user });
+      },
       error => {
         dispatch({ type: action.AUTH_FAILED, payload: error });
       });
