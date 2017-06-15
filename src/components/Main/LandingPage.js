@@ -20,10 +20,13 @@ function LandingPage() {
 
         <span ><img className="item-icons" src={coffee} /></span>
         <span className="savings-text" >Daily Coffee:$3.25<img className="item-icons" src={arrow} />save .75 <img className="item-icons arrow" src={arrow} />$273 yearly savings</span><br></br>
+
         <span ><img className="item-icons" src={shoe} /></span>
-        <span >Daily Coffee:$3.25<img className="item-icons arrow" src={arrow} />save .75 <img className="item-icons" src={arrow} />$273 yearly savings</span><br></br>
+        <span className="savings-text">Daily Coffee:$3.25<img className="item-icons arrow" src={arrow} />save .75 <img className="item-icons" src={arrow} />$273 yearly savings</span><br></br>
+
+
         <span ><img className="item-icons" src={grocery} /></span>
-        <span >Daily Coffee:$3.25<img className="item-icons arrow" src={arrow} />save .75 <img className="item-icons" src={arrow} />$273 yearly savings</span>
+        <span className="savings-text">Daily Coffee:$3.25<img className="item-icons arrow" src={arrow} />save .75 <img className="item-icons" src={arrow} />$273 yearly savings</span>
 
         <div className="welcomeHome welcomeHome-alt">
           <h1 className="dash-trailing">Treat Yourself.</h1>
