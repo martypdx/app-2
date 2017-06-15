@@ -6,6 +6,7 @@ import transport from '../../photos/transport.svg';
 import burger from '../../photos/burger.svg';
 import arrow from '../../photos/arrow.svg';
 import '../../css/LandingPage.css';
+import LandingCarousel from './LandingCarousel';
 
 function LandingPage() {
   return (
@@ -32,6 +33,7 @@ function LandingPage() {
         <div className="welcomeHome welcomeHome-alt">
           <h1 className="dash-trailing">Treat Yourself.</h1>
           <p className="landing-text">Our users save an average of <b className="money">$860</b>.  What will you do with all of your Good Cents?</p>
+          <LandingCarousel/>
         </div>
         <Link to="/auth/signup" className="hard-sell">Sign Up Now</Link>
       </div>
