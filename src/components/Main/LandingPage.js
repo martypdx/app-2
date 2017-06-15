@@ -10,6 +10,7 @@ function LandingPage() {
       <div className="welcomeHome">
         <h2 className="dash-trailing">This Is Good Cents.</h2>
         <p className="landing-text">Spare change to make change with good cents.</p>
+        <Link to="/auth/signup"><li className="navButton">Sign Up Now</li></Link>
       </div>
     </div>
   );

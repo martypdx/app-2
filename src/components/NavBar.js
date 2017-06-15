@@ -4,22 +4,22 @@ import '../css/NavBar.css';
 import MobileNav from './MobileNav';
 import { Link } from 'react-router-dom';
 import { nameOfAnimation as Menu } from 'react-burger-menu';
-import {connect} from 'react-redux';
-import {signout} from './Main/actions';
+import { connect } from 'react-redux';
+import { signout } from './Main/actions';
 
 function NavBar({ user, signout }) {
   if (window.innerWidth < 500) return <MobileNav />;
 
   return (
     <div className="NavBar">
-      <img src={GOODCENTS} className="navLogo" alt="logo" />
+      <Link to="/"> <img src={GOODCENTS} className="navLogo" alt="logo" /></Link>
       <ul className="ListContainer">
-         <Link to="/"><li>About</li></Link>
+        <Link to="/"><li>About</li></Link>
         {user
           ? <Link to="/" onClick={signout}><li>Log Out</li></Link>
           : <Link to="/auth/signin"><li>Log In</li></Link>
         }
-        <Link to="/auth/signup"><li className="navButton">Create Account</li></Link>
+        <li><Link to="/auth/signup" className="navButton">Create Account</Link></li>
       </ul>
     </div>
   );
