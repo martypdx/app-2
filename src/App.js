@@ -4,14 +4,13 @@ import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import LandingPage from './components/Main/LandingPage';
 import Onboard from './components/Onboard';
-import About from './components/About';
 import Home from './components/Home';
 import Auth from './components/Main/Auth';
+import Contribution from './components/HomeViews/Contribution';
 import { checkForToken } from './components/Main/actions';
 import {
   BrowserRouter as Router,
   Route,
-  withRouter,
   Switch
 } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -34,6 +33,7 @@ class App extends Component {
               <Route path="/onboard" component={Onboard} />
             }
             <Route path="/home" component={Home} />
+            <Route path='/cashout' component={Contribution} />
           </Switch>
           <Footer />
         </div>
