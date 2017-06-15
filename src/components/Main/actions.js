@@ -29,11 +29,10 @@ export function signup(user) {
     .then(() => authAPI.getUser())
     .then(user => {
       dispatch({ type: action.ADDED_USER, payload: user });
-    })
-    .catch(error => {
-      console.log('Error: ', error);
-      dispatch({ type: action.AUTH_FAILED, payload: error});
-    });
+    },
+      error => {
+        dispatch({ type: action.AUTH_FAILED, payload: error });
+      });
   };
 }
 
@@ -46,8 +45,8 @@ export function signin(credentials) {
       .then(() => authAPI.getUser())
       .then(user => {
         dispatch({ type: action.ADDED_USER, payload: user });
-      })
-      .catch(error => {
+      },
+      error => {
         dispatch({ type: action.AUTH_FAILED, payload: error });
       });
   };

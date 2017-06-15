@@ -12,7 +12,7 @@ import '../css/About.css';
 
 function Onboard({ user, accounts, linking, location }) {
   if (linking) return <Loading/>;
-  if (accounts) return <Redirect to="/home" />;
+  if (user && user.plaid.accounts) return <Redirect to="/home" />;
   return (
     <div>
       <Carousel className="About">
