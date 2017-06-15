@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+
 .About {
     color: #0d97ff;
+    font-family: helvetica;
+    line-height: 1.6em;
 }
 
 .About img {
@@ -9,8 +13,15 @@
 }
 
 .About h2 {
+    font-family: 'Dancing Script';
+    color:grey;
     width: 50vw;
-    margin: 0 auto;
+    margin: 20px auto;
+}
+
+.About p {
+    margin: 20px auto;
+    padding: 0 10%;
 }
 
 .About div {
@@ -28,4 +39,19 @@ div .slider-decorator-1 {
 
 div .slider-decorator-0 {
     display: none;
+}
+
+.mainButton{
+    background: #0d97ff;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 15px;
+    font-family: "CalibreSemibold", helvetica, sans-serif;
+    letter-spacing: 0.5px;
+    max-height: 40px;
+    line-height: 40px;
+    padding: 10px, 25px;
+    text-transform: capitalize;
+    border: none;
+    border-radius: 5px;
 }

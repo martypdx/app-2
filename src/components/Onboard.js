@@ -18,15 +18,19 @@ function Onboard({ user, accounts, linking, location }) {
       <Carousel className="About">
         <div>
           <img src={Goals} alt="Goals" />
-          <h2>Set your goals to start saving it could be a <br />goal for literally anything !!</h2>
+          <h2>Welcome to Good Cents!</h2>
+          <p>Start using your digital "spare change" to save toward a goal, or contribute to something good.</p>
         </div>
         <div>
           <img src={ATM} alt="ATM" />
-          <h2>We act as your personal piggybank to start <br />saving and you can withdraw whenever you hit your goal!!</h2>
+          <h2>How it works:</h2>
+          <p>We'll start by linking one of your bank accounts or credit cards to Good Cents. As you make purchases throughout the week, we'll track your transactions, tally your change to the nearest dollar, and deposit it into our digital piggy bank.</p>
+          <p>When you hit the minimum threshold, cash out!</p>
         </div>
         <div>
           <img src={WithYou} alt="WithYou" />
-          <h2>Link Your Bank Acount Now</h2>
+          <h2>Ready to get started?</h2>
+          <p>Click below to link your bank account.</p>
           <PlaidAccountLink />
         </div>
       </Carousel>

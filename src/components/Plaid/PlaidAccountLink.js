@@ -2,6 +2,7 @@
 import React from 'react';
 import { linkAccount } from './actions';
 import store from '../../stores/store';
+import '../../css/About.css';
 
 const handler = Plaid.create({
   apiVersion: 'v2',
@@ -20,7 +21,7 @@ const handler = Plaid.create({
 export default function PlaidAccountLink() {
   return (
     <div>
-      <button onClick={() => handler.open()}>Link Bank Account</button>
+      <button className="mainButton" onClick={() => handler.open()}>Link Bank Account</button>
     </div>
   );
 }

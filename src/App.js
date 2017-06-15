@@ -1,6 +1,7 @@
-import React, {Component}from 'react';
+import React, { Component } from 'react';
 import './css/App.css';
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 import LandingPage from './components/Main/LandingPage';
 import Onboard from './components/Onboard';
 import About from './components/About';
@@ -20,8 +21,8 @@ class App extends Component {
     this.props.checkForToken();
   }
 
-  render () {
-    const {user} = this.props; 
+  render() {
+    const { user } = this.props;
     return (
       <Router>
         <div className="App">
@@ -34,6 +35,7 @@ class App extends Component {
             }
             <Route path="/home" component={Home} />
           </Switch>
+          <Footer />
         </div>
       </Router>
     );
@@ -42,7 +44,7 @@ class App extends Component {
 
 export default connect(
   state => ({ user: state.user }),
-  dispatch => ({ 
-    checkForToken() { dispatch(checkForToken()); }  
+  dispatch => ({
+    checkForToken() { dispatch(checkForToken()); }
   })
 )(App);
