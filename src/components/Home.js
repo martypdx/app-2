@@ -36,17 +36,13 @@ class Home extends Component {
             </div>
             <div className="ButtonsContainer">
               <div className="ButtonsBox"><Link to='/cashout'><button className="mainButton">Ready to Donate?</button></Link></div>
-              <div className="ButtonsBox">
-                <button className="mainButton">Deposit to Savings</button>
-              </div>
+              <div className="ButtonsBox"><Link to='/cashout'><button className="mainButton">Ready to Cash Out?</button></Link></div>
             </div>
-          </div>
-          <div className="LineGraphContainer">
-            
-          </div>
-          <div className="TransactionsContainer">
-            <Transactions />
-          </div>
+            <div className="LineGraphContainer">
+            </div>
+            <div className="TransactionsContainer">
+              <Transactions />
+            </div>
         </div>
       </section>
     );

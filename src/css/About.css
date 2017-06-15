@@ -2,19 +2,19 @@
 
 .About {
     color: #0d97ff;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: helvetica;
     line-height: 1.6em;
 }
 
 .About img {
     margin-top: 15vh;
-    max-width: 60vw;
-    max-height: 60vh;
+    max-width: 50vw;
+    max-height: 50vh;
 }
 
 .About h2 {
     font-family: 'Dancing Script';
-    color: grey;
+    color:grey;
     width: 50vw;
     margin: 20px auto;
 }
@@ -35,23 +35,10 @@ div .slider-decorator-2 {
 
 div .slider-decorator-1 {
     display: none;
-    margin: 150px 30px;
-    color: lightgray;
 }
 
 div .slider-decorator-0 {
     display: none;
-    margin: 150px 30px;
-    color: lightgray;
-}
-
-.carousel-img{
-    padding:10px;
-}
-
-.carousel-text{
- font-family: 'Source Sans Pro', sans-serif;
- color:rgb(8, 175, 142);
 }
 
 .mainButton{
@@ -61,22 +48,12 @@ div .slider-decorator-0 {
     font-size: 15px;
     font-family: "CalibreSemibold", helvetica, sans-serif;
     letter-spacing: 0.5px;
-    height: 10vw;
+    max-height: 40px;
     line-height: 40px;
-    padding: 10px, 50px;
-    margin: 5px 5px;
+    padding: 10px, 25px;
     text-transform: capitalize;
     border: none;
     border-radius: 5px;
-}
-
-.mainButton:hover {
-    background: #ffffff;
-    color: #0d97ff;
-    border: 3px solid #0d97ff;
-}
-.onboard-text{
-    font-size:24px;
 }
 
 .sign-in{
@@ -92,14 +69,4 @@ padding: 50px 60px;
 
 .cursive {
     font-size: 35px;
-}
-
-@media only screen and (max-width: 600px) {
-    div .slider-decorator-1 {
-    display: none;
-}
-
-div .slider-decorator-0 {
-    display: none;
-}
 }
