@@ -29,19 +29,18 @@ class Home extends Component {
           <div className="PiggyContainer">
             <PiggyBank />
           </div>
-          <div className="UserContainer">
-            <div className="UserBox"></div>
-            <div className="ButtonsContainer">
-              <div className="ButtonsBox"><Link to='/cashout/options'><button className="mainButton">Ready to Cash Out?</button></Link></div>
-              <div className="ButtonsBox"></div>
+            <div className="UserContainer">
+              <div className="UserBox"></div>
+              <div className="ButtonsContainer">
+                <div className="ButtonsBox"><Link to='/cashout'><button className="mainButton">Ready to Cash Out?</button></Link></div>
+                <div className="ButtonsBox"></div>
+              </div>
             </div>
-          </div>
-          <div className="LineGraphContainer">
-            
-          </div>
-          <div className="TransactionsContainer">
-            <Transactions />
-          </div>
+            <div className="LineGraphContainer">
+            </div>
+            <div className="TransactionsContainer">
+              <Transactions />
+            </div>
         </div>
       </section>
     );

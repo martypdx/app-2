@@ -1,6 +1,5 @@
 import plaidAPI from '../../api/plaidAPI';
 import * as action from '../Main/constants';
-
 export const LINK_ACCOUNT = 'LINK_ACCOUNT';
 export const LINKING_ACCOUNT = 'LINKING_ACCOUNT';
 export const GOT_TRANSACTIONS = 'GOT_TRANSACTIONS';
