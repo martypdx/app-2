@@ -23,7 +23,7 @@ export function getTransactions(access_token) {
         let trans = res.transactions.map(trans => {
           let start = trans.amount; 
           let end = Math.ceil(trans.amount);
-          let cents = end - start; 
+          let cents = end - start;
           total += cents;
           return {
             name: trans.name,

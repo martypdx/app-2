@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import '../css/Home.css';
 import SetGoal from './SetGoal';
 import Transactions from './HomeViews/Transactions';
+import PiggyBank from './HomeViews/PiggyBank';
 import { Redirect, withRouter } from 'react-router';
 import { connect } from 'react-redux';
 import { checkForToken } from './Main/actions';
@@ -29,6 +30,7 @@ class Home extends Component {
     if (!user) return <Redirect to="/" />;
     return (
       <div className="Home">
+        <PiggyBank />
         <div className="BabyNav">
           <h3>Set Goal</h3>
           <h3>Explore</h3>
