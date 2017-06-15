@@ -6,12 +6,11 @@ import transport from '../../photos/transport.svg';
 import burger from '../../photos/burger.svg';
 import arrow from '../../photos/arrow.svg';
 import '../../css/LandingPage.css';
-import LandingCarousel from './LandingCarousel';
 
 function LandingPage() {
   return (
     <div>
-      <div className="Home">
+      <div className="home">
         <img src={saveYourWay} className="backpack" alt="backpack" />
       </div>
       <div className="welcomeHome">
@@ -29,13 +28,11 @@ function LandingPage() {
           <span ><img className="item-icons burger" src={burger} /></span>
           <span className="savings-text">Lunch:$7.50<img className="item-icons arrow" src={arrow} />save .50 <img className="item-icons" src={arrow} />$182 yearly savings</span>
         </span>
-
-        <div className="welcomeHome welcomeHome-alt">
-          <h1 className="dash-trailing">Treat Yourself.</h1>
-          <p className="landing-text">Our users save an average of <b className="money">$860</b>.  What will you do with all of your Good Cents?</p>
-          <LandingCarousel/>
-        </div>
-        <Link to="/auth/signup" className="hard-sell">Sign Up Now</Link>
+      </div>
+      <div className="welcomeHome welcomeHome-alt">
+        <h1 className="dash-trailing">Treat Yourself.</h1>
+        <p className="landing-text">Our users save an average of <b className="money">$860</b>.  What will you do with all of your Good Cents?</p>
+      <Link to="/auth/signup" className="hard-sell">Sign Up Now</Link>
       </div>
     </div>
   );
