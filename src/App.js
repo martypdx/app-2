@@ -4,7 +4,6 @@ import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import LandingPage from './components/Main/LandingPage';
 import Onboard from './components/Onboard';
-import About from './components/About';
 import Home from './components/Home';
 import Auth from './components/Main/Auth';
 import { checkForToken } from './components/Main/actions';

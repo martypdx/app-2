@@ -13,8 +13,8 @@ function Auth({ user, signin, signup, error, location, token }) {
       <img src={Cents} alt="Cents" />
       <Switch>
         <Route path="/auth/signin" component={() => (
-          <div>
-            <h2>Sign into your account here:</h2>
+          <div className="sign-in">
+            <h2 className="cursive">Sign into your account here:</h2>
             <Credentials submit={signin} />
             <p>Not yet registered? <Link to="/auth/signup">Sign Up</Link></p>
             {error &&
