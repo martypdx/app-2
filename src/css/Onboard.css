@@ -1,0 +1,50 @@
+.About {
+    color: #0d97ff;
+}
+
+.About img {
+    margin-top: 15vh;
+    max-width: 60vw;
+    max-height: 60vh;
+}
+
+.About h2 {
+    width: 50vw;
+    margin: 0 auto;
+}
+
+.About div {
+    height: 90vh;
+}
+
+div .slider-decorator-1 {
+    display: block;
+    margin: 150px 30px;
+    color: lightgray;
+}
+
+div .slider-decorator-0 {
+    display: block;
+    margin: 150px 30px;
+    color: lightgray;
+}
+
+.carousel-img{
+    padding:10px;
+}
+
+.carousel-text{
+ font-family: 'Source Sans Pro', sans-serif;
+ color:rgb(8, 175, 142);
+
+}
+
+@media only screen and (max-width: 600px) {
+    div .slider-decorator-1 {
+    display: none;
+}
+
+div .slider-decorator-0 {
+    display: none;
+}
+}

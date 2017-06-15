@@ -1,17 +1,17 @@
 import React from 'react';
 import Carousel from 'nuka-carousel';
 import Goals from '../photos/illustration-home-goal.png';
-import ATM from '../photos/illustrationATM.png';
+import ATM from '../photos/illustrationATM.jpg';
 import WithYou from '../photos/illustrationWithYou.png';
 import PlaidAccountLink from './Plaid/PlaidAccountLink';
 import Loading from './Main/Loading';
 import { withRouter, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import '../css/About.css';
+import '../css/Onboard.css';
 
 function Onboard({ user, accounts, linking, location }) {
-  if (linking) return <Loading/>;
+  if (linking) return <Loading />;
   if (user && accounts) return <Redirect to="/home" />;
   return (
     <div>
