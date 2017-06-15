@@ -16,15 +16,20 @@ function LandingPage() {
       <div className="welcomeHome">
         <h1 className="dash-trailing">This is Good Cents.</h1>
         <p className="landing-text">Let us turn your spare change into big savings....automatically!</p>
-        <ul className="item-icons-wrapper">
-          <li className="item-icons"><img src={coffee}/></li>
-          <li className="item-icons"><img src={shoe}/></li>
-          <li className="item-icons"><img src={grocery}/></li>
-        </ul>
+
+
+        <span ><img className="item-icons" src={coffee} /></span>
+        <span className="savings-text" >Daily Coffee:$3.25<img className="item-icons" src={arrow} />Weekly Savings: $5.25 <img className="item-icons arrow" src={arrow} />Yearly Savings: $273</span><br></br>
+        <span ><img className="item-icons" src={shoe} /></span>
+        <span >Daily Coffee:$3.25<img className="item-icons arrow" src={arrow} />Weekly Savings: $5.25 <img className="item-icons" src={arrow} />Yearly Savings: $273</span><br></br>
+        <span ><img className="item-icons" src={grocery} /></span>
+        <span >Daily Coffee:$3.25<img className="item-icons arrow" src={arrow} />Weekly Savings: $5.25 <img className="item-icons" src={arrow} />Yearly Savings: $273</span>
+
         <div className="welcomeHome welcomeHome-alt">
-<h1 className="dash-trailing">Treat Yourself.</h1>
+          <h1 className="dash-trailing">Treat Yourself.</h1>
+          <p className="landing-text">Our users save an average of <b className="money">$860</b>.  What will you do with all of your Good Cents?</p>
         </div>
-        <Link to="/auth/signup"><li className="navButton">Sign Up Now</li></Link>
+        <Link to="/auth/signup" className="hard-sell">Sign Up Now</Link>
       </div>
     </div>
   );
