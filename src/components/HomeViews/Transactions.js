@@ -13,10 +13,10 @@ class Transactions extends Component {
   render() {
     return (
       <div className="Transactions">
-        <h1>Transactions</h1>
+        <h1 className="headers">Transactions</h1>
         <ul className="applist">
           {this.props.transactions &&
-            this.props.transactions.map((trans, i) => {
+            this.props.transactions.slice(0,5).map((trans, i) => {
               return <Transaction
                 key={i}
                 {...trans} />;
