@@ -2,7 +2,7 @@
 import React from 'react';
 import { linkAccount } from './actions';
 import store from '../../stores/store';
-import '../../css/About.css';
+import '../../css/Onboard.css';
 
 const handler = Plaid.create({
   apiVersion: 'v2',

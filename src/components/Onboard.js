@@ -8,7 +8,6 @@ import PlaidAccountLink from './Plaid/PlaidAccountLink';
 import Loading from './Main/Loading';
 import { withRouter, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
-
 import '../css/Onboard.css';
 
 function Onboard({ user, accounts, linking, location }) {
@@ -49,5 +48,5 @@ export default withRouter(connect(
   state => ({
     user: state.user,
     linking: state.linking,
-    accounts: state.accounts
+    accounts: state.user.plaid.accounts
   }))(Onboard));
