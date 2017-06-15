@@ -1,5 +1,5 @@
 import React from 'react';
-import pigLogo from '../photos/pigLogo.png';
+import GOODCENTS from '../photos/GOODCENTS.svg';
 import '../css/NavBar.css';
 import MobileNav from './MobileNav';
 import { Link } from 'react-router-dom';
@@ -12,14 +12,13 @@ function NavBar({ user, signout }) {
 
   return (
     <div className="NavBar">
-      {/*<img src={pigLogo} className="navLogo" alt="logo" />*/}
+      <img src={GOODCENTS} className="navLogo" alt="logo" />
       <ul className="ListContainer">
-        <Link to="/"><li>About</li></Link>
+         <Link to="/"><li>About</li></Link>
         {user
           ? <Link to="/" onClick={signout}><li>Log Out</li></Link>
           : <Link to="/auth/signin"><li>Log In</li></Link>
         }
-        <Link to="/home"><li>Learn More</li></Link>
         <Link to="/auth/signup"><li className="navButton">Create Account</li></Link>
       </ul>
     </div>

@@ -1,32 +1,27 @@
 
 .NavBar {
     background-color: rgb(255, 255, 255, .3);
-    height: 15vh;
     width: 100%;
-    position: fixed;
-    top:0px;
-    z-index: 1;
+    background-color: white;
+    padding: 25px 60px;
+    text-align: left;
 }
 
 .ListContainer{
   text-decoration: none;
   float: right;
-  padding-left: 10px;
 }
 
 .ListContainer li{
-    opacity:1;
   display:inline-block;
   text-decoration: none;
-  padding: 0px 20px;
-
+  padding: 0px 25px;
+ 
 }
 
 .navLogo{
-  padding: 10px;
-  float: left;
-  max-width: 10vh;
-  height: 20vh;
+  max-width: 25%;
+  height: auto;
 }
 
 .navButton{
