@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.6",
     "nuka-carousel": "^2.0.4",
     "plaid": "^2.0.4",
     "react": "^15.6.0",
@@ -12,6 +11,7 @@
     "react-burger-menu": "^2.0.2",
     "react-dom": "^15.6.0",
     "react-redux": "^5.0.5",
+    "react-resize-detector": "^0.5.0",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
     "reactnav": "^2.0.0",
