@@ -1,14 +1,14 @@
 import React from 'react';
 import Carousel from 'nuka-carousel';
 import Goals from '../photos/illustration-home-goal.png';
-import ATM from '../photos/illustrationATM.png';
+import piggyBank from '../photos/piggyBank.jpg';
 import WithYou from '../photos/illustrationWithYou.png';
 import PlaidAccountLink from './Plaid/PlaidAccountLink';
 import Loading from './Main/Loading';
 import { withRouter, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import '../css/About.css';
+import '../css/Onboard.css';
 
 function Onboard({ user, accounts, linking, location }) {
   if (linking) return <Loading/>;
@@ -17,18 +17,19 @@ function Onboard({ user, accounts, linking, location }) {
     <div>
       <Carousel className="About">
         <div>
-          <img src={Goals} alt="Goals" />
-          <h2>Set your goals to start saving it could be a <br />goal for literally anything !!</h2>
+          <img className="carousel-img"src={Goals} alt="Goals" />
+          <h1 className="carousel-text">Make your regular purchase....</h1>
         </div>
         <div>
-          <img src={ATM} alt="ATM" />
-          <h2>We act as your personal piggybank to start <br />saving and you can withdraw whenever you hit your goal!!</h2>
+          <img src={piggyBank} alt="ATM" />
+          <h1 className="carousel-text">And let us do the savings for you...automatically!</h1>
         </div>
         <div>
           <img src={WithYou} alt="WithYou" />
-          <h2>Link Your Bank Acount Now</h2>
+            {/*<h1 className="carousel-text">Link Your Bank Acount Now</h1>*/}
           <PlaidAccountLink />
         </div>
+       
       </Carousel>
     </div>
   );

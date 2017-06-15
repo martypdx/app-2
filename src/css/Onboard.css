@@ -29,3 +29,13 @@ div .slider-decorator-1 {
 div .slider-decorator-0 {
     display: none;
 }
+
+.carousel-img{
+    padding:10px;
+}
+
+.carousel-text{
+ font-family: 'Source Sans Pro', sans-serif;
+ color:rgb(8, 175, 142);
+
+}

@@ -20,7 +20,7 @@ const handler = Plaid.create({
 export default function PlaidAccountLink() {
   return (
     <div>
-      <button onClick={() => handler.open()}>Link Bank Account</button>
+      <button className="hard-sell" onClick={() => handler.open()}>Link Bank Account</button>
     </div>
   );
 }
