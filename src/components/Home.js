@@ -42,11 +42,6 @@ class Home extends Component {
   }
 }
 
-// export default withRouter(connect(
-//   state => ({
-//     accounts: state.user.plaid.accounts
-//   }))(Home));
-
 export default withRouter(connect(
   state => ({ user: state.user }),
   dispatch => ({
