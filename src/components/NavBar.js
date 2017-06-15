@@ -1,11 +1,9 @@
 import React from 'react';
-import pigLogo from '../photos/pigLogo.png';
 import '../css/NavBar.css';
 import MobileNav from './MobileNav';
 import { Link } from 'react-router-dom';
-import { nameOfAnimation as Menu } from 'react-burger-menu';
-import {connect} from 'react-redux';
-import {signout} from './Main/actions';
+import { connect } from 'react-redux';
+import { signout } from './Main/actions';
 import GOODCENTS from '../photos/GOODCENTS.svg';
 
 function NavBar({ user, signout }) {
@@ -20,7 +18,10 @@ function NavBar({ user, signout }) {
           ? <Link to="/" onClick={signout}><li>Log Out</li></Link>
           : <Link to="/auth/signin"><li>Log In</li></Link>
         }
-        <Link to="/auth/signup"><li className="navButton">Create Account</li></Link>
+        {user
+          ? <Link to="/auth/signup"><li className="navButton">Go To Account</li></Link>
+          : <Link to="/auth/signup"><li className="navButton">Create Account</li></Link>
+        }
       </ul>
     </div>
   );
