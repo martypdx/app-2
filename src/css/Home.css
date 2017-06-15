@@ -1,21 +1,55 @@
-
-.BabyNav {
+.Home {
+  background-color: #0d97ff;
   display: flex;
-  justify-content: center;
   flex-direction: row;
-  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   width: 100%;
 }
 
-.BabyNav h3 {
-  color: #0d97ff;
-  margin: 0 2vh;
-  font-size: 1.5vh;
-  padding: 4px 4px;
-  border-radius: 5px;
+.PiggyContainer {
+  background-color: white;
+  height: 30vw;
+  width: 45vw;
+  margin: 8px 8px;
 }
 
-.BabyNav h3:hover {
-  color: white;
-  background-color: #0d97ff;
+.UserContainer {
+  height: 30vw;
+  width: 45vw;
+  margin: 8px 8px;
+}
+
+.UserBox {
+  background-color: white;
+  height: 15vw;
+  width: 45vw;
+  margin: 8px 8px;
+}
+
+.ButtonsBox {
+  background-color: white;
+  height: 15vw;
+  width: 22vw;
+  margin: 5px 8px;
+}
+
+.ButtonsContainer {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+
+.LineGraphContainer {
+  background-color: white;
+  height: 30vw;
+  width: 45vw;
+  margin: 8px 8px;
+}
+
+.TransactionsContainer {
+  background-color: white;
+  height: 30vw;
+  width: 45vw;
+  margin: 30px 8px;
 }
