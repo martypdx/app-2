@@ -10,7 +10,6 @@ import { checkForToken } from './components/Main/actions';
 import {
   BrowserRouter as Router,
   Route,
-  withRouter,
   Switch
 } from 'react-router-dom';
 import { connect } from 'react-redux';

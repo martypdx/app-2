@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../css/Home.css';
-import SetGoal from './SetGoal';
 import Contribution from './HomeViews/Contribution';
 import Transactions from './HomeViews/Transactions';
 import PiggyBank from './HomeViews/PiggyBank';
@@ -36,7 +35,7 @@ class Home extends Component {
     return (
       <section>
         <PiggyBank />
-        <Link to='/cashout'><p>Ready to Cash Out?</p></Link>
+        <Link to='/cashout'><button className="mainButton">Ready to Cash Out?</button></Link>
         <Route path='/cashout' component={Contribution} />
         <Transactions />
       </section>

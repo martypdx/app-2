@@ -1,12 +1,16 @@
 import React from 'react';
-import {connect} from 'react-redux';
+import ATM from '../../photos/illustrationATM.png';
+import { connect } from 'react-redux';
 import { cashingOut } from '../Plaid/actions';
 
-function Contribution({ cents }) {
+function Contribution({ piggybank }) {
   return (
     <div>
+      <img src={ATM} alt="Cash out" />
+      <h2>Nice job!</h2>
+      <p>Ready to cash out ${piggybank.toFixed(2)}?</p>
       Good Job! Are you ready to donate?
-      <button>Donate Now</button>
+      <button className="mainButton" onClick={() => cashingOut()}>Donate</button>
     </div>
   );
 }
