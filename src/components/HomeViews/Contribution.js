@@ -2,15 +2,57 @@ import React from 'react';
 import ATM from '../../photos/illustrationATM.png';
 import { connect } from 'react-redux';
 import { cashingOut } from '../Plaid/actions';
-import { withRouter } from 'react-router-dom';
+import { Switch, Route, Link, withRouter } from 'react-router-dom';
+import { RouteTransition } from 'react-router-transition';
 
-function Contribution({ piggybank }) {
+function Contribution({ location, history, piggybank }) {
   return (
     <div>
-      <img src={ATM} alt="Cash out" />
-      <h2>Nice job!</h2>
-      <p>Ready to cash out ${piggybank.toFixed(2)}?</p>
-      <button className="mainButton" onClick={() => cashingOut()}>Donate</button>
+      <Switch>
+        <Route path="/cashout/options" component={() => (
+          <div>
+            <img src={ATM} alt="Cash out" />
+            <h2>Nice job!</h2>
+            <p>Ready to cash out ${piggybank.toFixed(2)}?</p>
+            <p>Choose one of the options below:</p>
+            <div className="buttonContainer">
+              <Link to="/cashout/confirm-aclu"><button className="mainButton">Donate to ACLU</button></Link>
+              <Link to="/cashout/confirm-naturecon"><button className="mainButton">Donate to Nature Conservatory</button></Link>
+              <Link to="/cashout/confirm-deposit"><button className="mainButton">Deposit into Savings</button></Link>
+            </div>
+          </div>
+        )} />
+        <Route path="/cashout/confirm-aclu" render={() => (
+          <div>
+            <h2>Confirmation</h2>
+            <p>Are you sure you want to donate ${piggybank.toFixed(2)} to the ACLU?</p>
+            <div className="buttonContainer">
+              <button className="mainButton" onClick={() => cashingOut()}>Yes, I'm Sure!</button>
+              <Link to="/cashout/options"><button className="mainButton">No, Take Me Back</button></Link>
+            </div>
+          </div>
+        )} />
+        <Route path="/cashout/confirm-naturecon" render={() => (
+          <div>
+            <h2>Confirmation</h2>
+            <p>Are you sure you want to donate ${piggybank.toFixed(2)} to the Nature Conservatory?</p>
+            <div className="buttonContainer">
+              <button className="mainButton" onClick={() => cashingOut()}>Yes, I'm Sure!</button>
+              <Link to="/cashout/options"><button className="mainButton">No, Take Me Back</button></Link>
+            </div>
+          </div>
+        )} />
+        <Route path="/cashout/confirm-deposit" render={() => (
+          <div>
+            <h2>Confirmation</h2>
+            <p>Are you sure you want to deposit ${piggybank.toFixed(2)} into your savings?</p>
+            <div class="buttonContainer">
+              <button className="mainButton" onClick={() => cashingOut()}>Yes, I'm Sure!</button>
+              <Link to="/cashout/options"><button className="mainButton">No, Take Me Back</button></Link>
+            </div>
+          </div>
+        )} />
+      </Switch>
     </div>
   );
 }
