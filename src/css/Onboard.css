@@ -17,17 +17,16 @@
     height: 90vh;
 }
 
-div .slider-decorator-2 {
-    height: 5vh;
-    bottom: none;
-}
-
 div .slider-decorator-1 {
-    display: none;
+    display: block;
+    margin: 150px 30px;
+    color: lightgray;
 }
 
 div .slider-decorator-0 {
-    display: none;
+    display: block;
+    margin: 150px 30px;
+    color: lightgray;
 }
 
 .carousel-img{
@@ -38,4 +37,14 @@ div .slider-decorator-0 {
  font-family: 'Source Sans Pro', sans-serif;
  color:rgb(8, 175, 142);
 
+}
+
+@media only screen and (max-width: 600px) {
+    div .slider-decorator-1 {
+    display: none;
+}
+
+div .slider-decorator-0 {
+    display: none;
+}
 }
