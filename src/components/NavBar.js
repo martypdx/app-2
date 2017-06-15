@@ -31,6 +31,6 @@ export default connect(
   dispatch => ({
     signout() { dispatch(signout()); }
   })
-)(NavBar)
+)(NavBar);
 
 
