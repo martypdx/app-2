@@ -12,7 +12,8 @@ import '../css/Onboard.css';
 
 function Onboard({ user, accounts, linking, location }) {
   if (linking) return <Loading />;
-  if (user && accounts) return <Redirect to="/home" />;
+  //Accounts is set to the user object; debug redirects here
+  if (user && (!accounts.length == 0)) return <Redirect to="/home" />;
   return (
     <div>
       <Carousel className="About">
@@ -48,5 +49,6 @@ export default withRouter(connect(
   state => ({
     user: state.user,
     linking: state.linking,
+    //Should redirect fail, debug accounts in state
     accounts: state.user.plaid.accounts
   }))(Onboard));
