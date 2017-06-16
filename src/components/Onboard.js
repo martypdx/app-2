@@ -48,5 +48,5 @@ export default withRouter(connect(
   state => ({
     user: state.user,
     linking: state.linking,
-    accounts: state.user.plaid.accounts
+    accounts: state.accounts
   }))(Onboard));
