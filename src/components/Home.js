@@ -20,20 +20,19 @@ class Home extends Component {
       <section>
         <div className="Home">
           <div className="PiggyContainer">
+            <h3>Your Balance:</h3>
             <PiggyBank />
             <div className="ButtonsContainer">
-              <div className="ButtonsBox"><Link to='/cashout/options'><button className="mainButton">Ready to Donate?</button></Link></div>
-              <div className="ButtonsBox"><Link to='/cashout/options'><button className="mainButton">Ready to Cash Out?</button></Link></div>
+              <div className="ButtonsBox"><Link to='/cashout/options'><button className="mainButton">Donate</button></Link></div>
+              <div className="ButtonsBox"><Link to='/cashout/options'><button className="mainButton">Cash Out</button></Link></div>
             </div>
-            <p>Last Cash Out: </p>
           </div>
           <div className="UserContainer">
             <div className="UserBox">
               <User />
             </div>
           </div>
-          <div className="LineGraphContainer">
-          </div>
+          <br></br>
           <div className="TransactionsContainer">
             <Transactions />
           </div>

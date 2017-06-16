@@ -10,7 +10,6 @@ function Success({ location, history, piggybank }) {
     <div className="Contribution">
       <img src={ATM} alt="Cash out" />
       <h2>Your transaction was successful!</h2>
-      <h3>Cashed Out: ${piggybank.toFixed(2)}</h3>
       <p>Please check the email you have linked to this account for a receipt of this transactions.</p>
       <p>Be aware that, depending on your bank, this transfer may take up to 48 hours to appear in your balance. If you have any questions, please contact support.</p>
       <div className="buttonContainer">

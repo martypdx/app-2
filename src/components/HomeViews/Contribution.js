@@ -16,8 +16,7 @@ function Contribution({ linking, location, history, piggybank }) {
           <div className="Contribution">
             <img src={ATM} alt="Cash out" />
             <h2>Nice job!</h2>
-            <h3>${piggybank.toFixed(2)}</h3>
-            <p>Ready to cash out ${piggybank.toFixed(2)}?</p>
+            <h3>Ready to cash out ${piggybank.toFixed(2)}?</h3>
             <p>Choose one of the options below:</p>
             <div className="buttonContainer">
               <Link to="/cashout/confirm-aclu"><button className="mainButton">Donate to ACLU</button></Link>

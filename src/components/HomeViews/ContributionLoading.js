@@ -1,14 +1,14 @@
 import React from 'react';
 import Loader from 'halogen/ClipLoader';
-import '../../css/Onboard.css';
+import '../../css/Contribution.css';
 
-export default function Loading({ user, accounts }) {
+export default function ContributionLoading({ user, accounts }) {
   return (
-    <div className="About">
-      <h2>Synching your accounts now...</h2>
-      <h2>Thanks for your patience!</h2>
-      <p>Average Load Time: 10 seconds</p>
-      <Loader color="#0d97ff" size="16px" margin="4px"/>
+    <div className="Contribution">
+      <h2>Contacting your bank...</h2>
+      <h2>Transfering funds now...</h2>
+      <p>Average Load Time: 5 seconds</p>
+      <Loader color="#0d97ff" size="30px" margin="4px"/>
     </div>
   );
 }
