@@ -5,8 +5,11 @@ import { getTransactions } from '../Plaid/actions';
 import Transaction from './Transaction';
 
 class Transactions extends Component {
-
-  componentWillMount() {
+  constructor () {
+    super();
+    this.transactions = this.transactions.bind(this);
+  }
+  transactions() {
     this.props.getTransactions(this.props.user.plaid.access_token);
   }
 
@@ -16,12 +19,13 @@ class Transactions extends Component {
         <h1 className="headers">Transactions</h1>
         <ul className="applist">
           {this.props.transactions &&
-            this.props.transactions.slice(0,5).map((trans, i) => {
+            this.props.transactions.slice(0, 5).map((trans, i) => {
               return <Transaction
                 key={i}
                 {...trans} />;
             })}
         </ul>
+        <button className="mainButton" onClick={this.transactions}>Sync Transactions</button>
       </div>
     );
   }
