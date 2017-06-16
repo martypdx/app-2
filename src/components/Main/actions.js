@@ -46,7 +46,7 @@ export function signin(credentials) {
       .then(() => authAPI.getUser())
       .then(user => {
         dispatch({ type: action.ADDED_USER, payload: user });
-        dispatch({ type: plaidAction.LINK_ACCOUNT, payload: user.plaid.accounts });
+        // dispatch({ type: plaidAction.LINK_ACCOUNT, payload: user.plaid.accounts });
       },
       error => {
         dispatch({ type: action.AUTH_FAILED, payload: error });

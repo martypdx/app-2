@@ -7,8 +7,8 @@ line-height: 1.6em;
 }
 
 .About img {
-max-width: 80vw;
-max-height: 80vh;
+max-width: 40vw;
+max-height: 40vh;
 width: 45%;
 }
 
@@ -23,10 +23,6 @@ margin: 20px auto;
 margin: 20px auto;
 padding: 0 10%;
 }
-
-/*.About div {
-    height: 90vh;
-}*/
 
 div .slider-decorator-2 {
 height: 5vh;
@@ -46,12 +42,12 @@ color: lightgray;
 }
 
 .carousel-img{
-padding:10px;
+padding: 10px;
 }
 
 .carousel-text{
  font-family: 'Source Sans Pro', sans-serif;
- color:rgb(8, 175, 142);
+ color: rgb(8, 175, 142);
 }
 
 .mainButton{

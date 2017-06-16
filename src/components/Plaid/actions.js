@@ -34,14 +34,11 @@ export function getTransactions(access_token) {
             date: trans.date,
           };
         });
+        trans.total = total;
 
         dispatch({
           type: GOT_TRANSACTIONS,
           payload: trans
-        });
-        dispatch({
-          type: action.ADD_TRANSACTIONS,
-          payload: total
         });
       })
       .catch(err => console.log(err));
