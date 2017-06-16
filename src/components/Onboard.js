@@ -29,7 +29,7 @@ function Onboard({ user, accounts, linking, location }) {
 
         </div>
         <div>
-          <img src={piggyBank} alt="ATM" />
+          <img src={ATM} alt="ATM" />
           <h2>How it works:</h2>
           <p className="onboard-text">When you make a purchase, we'll tally your change to the nearest dollar and deposit your spare change into a digital piggy bank.</p>
           <p className="onboard-text">When you hit the $10 minimum savings, cash out or save more!</p>
