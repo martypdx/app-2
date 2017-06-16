@@ -29,7 +29,7 @@ class PiggyBank extends Component {
         if (value === 0) {
           circle.setText('');
         } else {
-          circle.setText("You've Saved");
+          circle.setText('You\'ve Saved');
         }
 
       }
