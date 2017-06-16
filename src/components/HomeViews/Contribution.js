@@ -2,18 +2,21 @@ import React from 'react';
 import ATM from '../../photos/illustrationATM.png';
 import { connect } from 'react-redux';
 import { cashingOut } from '../Plaid/actions';
-import { Switch, Route, Link, withRouter } from 'react-router-dom';
-import { RouteTransition } from 'react-router-transition';
+import { Switch, Route, Link, Redirect, withRouter } from 'react-router-dom';
+import ContributionLoading from './ContributionLoading';
+import '../../css/Contribution.css';
 
-function Contribution({ location, history, piggybank }) {
+function Contribution({ linking, location, history, piggybank }) {
+  if (linking) return <ContributionLoading />;
+  if (piggybank == 0) return <Redirect to="/success" />;
   return (
     <div>
       <Switch>
         <Route path="/cashout/options" component={() => (
-          <div>
+          <div className="Contribution">
             <img src={ATM} alt="Cash out" />
             <h2>Nice job!</h2>
-            <p>Ready to cash out ${piggybank.toFixed(2)}?</p>
+            <h3>Ready to cash out ${piggybank.toFixed(2)}?</h3>
             <p>Choose one of the options below:</p>
             <div className="buttonContainer">
               <Link to="/cashout/confirm-aclu"><button className="mainButton">Donate to ACLU</button></Link>
@@ -46,7 +49,7 @@ function Contribution({ location, history, piggybank }) {
           <div>
             <h2>Confirmation</h2>
             <p>Are you sure you want to deposit ${piggybank.toFixed(2)} into your savings?</p>
-            <div class="buttonContainer">
+            <div className="buttonContainer">
               <button className="mainButton" onClick={() => cashingOut()}>Yes, I'm Sure!</button>
               <Link to="/cashout/options"><button className="mainButton">No, Take Me Back</button></Link>
             </div>
@@ -60,6 +63,7 @@ function Contribution({ location, history, piggybank }) {
 export default withRouter(connect(
   state => ({
     user: state.user,
+    linking: state.linking,
     piggybank: state.piggybank
   }),
   dispatch => ({

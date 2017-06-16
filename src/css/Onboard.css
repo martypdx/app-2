@@ -24,9 +24,9 @@ margin: 20px auto;
 padding: 0 10%;
 }
 
-.About div {
-height: 90vh;
-}
+/*.About div {
+    height: 90vh;
+}*/
 
 div .slider-decorator-2 {
 height: 5vh;
@@ -62,11 +62,17 @@ font-size: 15px;
 font-family: "CalibreSemibold", helvetica, sans-serif;
 letter-spacing: 0.5px;
 max-height: 40px;
+min-width: 12vw;
 line-height: 40px;
 padding: 10px, 25px;
 text-transform: capitalize;
 border: none;
 border-radius: 5px;
+
+.mainButton:hover {
+    background: #ffffff;
+    color: #0d97ff;
+    border: 1px solid #0d97ff;
 }
 
 .onboard-text{
@@ -91,9 +97,9 @@ padding: 50px;
 @media only screen and (max-width: 600px) {
     div .slider-decorator-1 {
     display: none;
-}
+ }
 
 div .slider-decorator-0 {
     display: none;
-}
+ }
 }
