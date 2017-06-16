@@ -3,8 +3,20 @@ import { connect } from 'react-redux';
 var ProgressBar = require('progressbar.js');
 
 class PiggyBank extends Component {
-  componentDidMount() {
+  compnentDidMount() {
+    const { transactions, piggybank } = this.props;
+    if (transactions && transactions.length) {
+      this.drawProgessBar(piggybank);
+    }
+  }
 
+  componentWillReceiveProps({ transactions, piggybank}) {
+    if (transactions && transactions !== this.props.transactions && transactions.length) {
+      this.drawProgessBar(piggybank);
+    }
+  }
+
+  drawProgessBar(piggybank) {
     var bar = new ProgressBar.Circle('#container', {
       color: '#0d97ff',
       // This has to be the same size as the maximum width to
@@ -17,7 +29,7 @@ class PiggyBank extends Component {
         autoStyleContainer: false
       },
       from: { color: '#0d97ff', width: 1 },
-      to: { color: '#0d97ff', width:5 },
+      to: { color: '#0d97ff', width: 5 },
       // Set default step function for all animate calls
       step: function (state, circle) {
         circle.path.setAttribute('stroke', state.color);
@@ -27,7 +39,7 @@ class PiggyBank extends Component {
         if (value === 0) {
           circle.setText('');
         } else {
-          circle.setText('$3.26');
+          circle.setText(`$${piggybank.toFixed(2)}`);
         }
 
       }

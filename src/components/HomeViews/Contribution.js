@@ -1,14 +1,15 @@
 import React from 'react';
 import ATM from '../../photos/illustrationATM.png';
+// import piggybankRemoveIMG from '../../photos/piggybank-removing.png';
 import { connect } from 'react-redux';
 import { cashingOut } from '../Plaid/actions';
 import { Switch, Route, Link, Redirect, withRouter } from 'react-router-dom';
 import ContributionLoading from './ContributionLoading';
 import '../../css/Contribution.css';
 
-function Contribution({ linking, location, history, piggybank }) {
+function Contribution({ linking, location, history, piggybank, cashingOut }) {
   if (linking) return <ContributionLoading />;
-  if (piggybank == 0) return <Redirect to="/success" />;
+  if (!piggybank) return <Redirect to="/success" />;
   return (
     <div>
       <Switch>

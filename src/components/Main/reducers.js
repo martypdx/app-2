@@ -55,6 +55,8 @@ function accounts(state = null, action) {
   switch (action.type) {
     case plaidActions.LINK_ACCOUNT:
       return action.payload;
+    case actions.ADDED_USER:
+      return action.payload.plaid.accounts;
     case actions.LOGOUT:
     case actions.AUTH_FAILED:
       return null;
@@ -77,8 +79,8 @@ function transactions(state = null, action) {
 
 function piggybank(state = 0, action) {
   switch (action.type) {
-    case actions.ADD_TRANSACTIONS:
-      return action.payload;
+    case plaidActions.GOT_TRANSACTIONS:
+      return action.payload.total;
     case actions.LOGOUT:
     case actions.AUTH_FAILED:
     case plaidActions.CASHING_OUT:
