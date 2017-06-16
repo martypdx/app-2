@@ -1,6 +1,7 @@
 import React from 'react';
 import profilePic from '../../photos/profile-in-circle-christine.png';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import '../../css/User.css';
 
 function User({ user, accounts }) {
@@ -11,10 +12,10 @@ function User({ user, accounts }) {
       </div>
       <div className="profile-usertitle">
         <div className="profile-usertitle-name">
-          Yuval
+          {user.name}
         </div>
         <div className="profile-usertitle-job">
-          yuval@me.com
+          {user.email}
         </div>
         <div className="profile-userbuttons">
           {accounts
@@ -32,10 +33,9 @@ function User({ user, accounts }) {
 }
 
 
-export default connect(
+export default withRouter(connect(
   state => ({
     user: state.user,
-    transactions: state.transactions,
     piggybank: state.piggybank
   })
-)(User);
+)(User));

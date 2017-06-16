@@ -5,6 +5,13 @@
   flex-wrap: wrap;
   width: 100%;
 }
+
+.TopContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .chartOne {
   height: 60%;
   width: 90%;
@@ -25,7 +32,7 @@
 }
 
 .UserContainer {
-  height: 30vw;
+  height: 35vw;
   width: 45vw;
   margin: 8px 8px;
 }
@@ -36,10 +43,8 @@
   width: 45vw;
   margin: 8px 8px;
   color: #0d97ff;
-  display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 
 .UserBox h2 {

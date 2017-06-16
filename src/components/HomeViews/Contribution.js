@@ -3,7 +3,6 @@ import ATM from '../../photos/illustrationATM.png';
 import { connect } from 'react-redux';
 import { cashingOut } from '../Plaid/actions';
 import { Switch, Route, Link, withRouter } from 'react-router-dom';
-import { RouteTransition } from 'react-router-transition';
 
 function Contribution({ location, history, piggybank }) {
   return (
