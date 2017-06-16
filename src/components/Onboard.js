@@ -3,7 +3,6 @@ import Carousel from 'nuka-carousel';
 import Goals from '../photos/illustration-home-goal.png';
 import ATM from '../photos/illustrationATM.png';
 import WithYou from '../photos/illustrationWithYou.png';
-import piggyBank from '../photos/piggyBank.jpg';
 import PlaidAccountLink from './Plaid/PlaidAccountLink';
 import Loading from './Main/Loading';
 import { withRouter, Redirect } from 'react-router-dom';
