@@ -19,8 +19,7 @@ class PiggyBank extends Component {
   drawProgessBar(piggybank) {
     var bar = new ProgressBar.Circle('#container', {
       color: '#0d97ff',
-      // This has to be the same size as the maximum width to
-      // prevent clipping
+      // This has to be the same size as the maximum width to prevent clipping
       strokeWidth: 20,
       trailWidth: 5,
       easing: 'easeInOut',

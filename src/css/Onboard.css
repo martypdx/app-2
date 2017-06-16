@@ -7,9 +7,8 @@ line-height: 1.6em;
 }
 
 .About img {
-max-width: 40vw;
-max-height: 40vh;
-width: 45%;
+    max-width: 40vw;
+    max-height: 40vh;
 }
 
 .About h2 {
@@ -31,13 +30,13 @@ bottom: none;
 
 div .slider-decorator-1 {
 display: block;
-margin: 150px 30px;
+margin: 170px 30px;
 color: lightgray;
 }
 
 div .slider-decorator-0 {
 display: block;
-margin: 150px 30px;
+margin: 170px 30px;
 color: lightgray;
 }
 
