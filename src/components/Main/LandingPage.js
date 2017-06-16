@@ -32,7 +32,7 @@ function LandingPage() {
       </div>
       <div className="welcomeHome welcomeHome-alt">
         <h1 className="dash-trailing">Treat Yourself.</h1>
-        <p className="landing-text">Our users save an average of <b className="money">$860</b>.  What will you do with all of your Good Cents?</p>
+        <p className="hard-sell-text">Our users save an average of <b className="money">$860</b>.  What will you do with all of your Good Cents?</p>
         <Link to="/auth/signup" className="hard-sell">Sign Up Now</Link>
       </div>
     </div>
