@@ -1,6 +1,6 @@
 import React from 'react';
 import ATM from '../../photos/illustrationATM.png';
-// import piggybankRemoveIMG from '../../photos/piggybank-removing.png';
+import piggybankRemoveIMG from '../../photos/piggybank-removing.svg';
 import { connect } from 'react-redux';
 import { cashingOut } from '../Plaid/actions';
 import { Switch, Route, Link, Redirect, withRouter } from 'react-router-dom';
@@ -29,6 +29,7 @@ function Contribution({ linking, location, history, piggybank, cashingOut }) {
         <Route path="/cashout/confirm-aclu" render={() => (
           <div>
             <h2>Confirmation</h2>
+            <img className="piggy-icon" src={piggybankRemoveIMG} alt="Cash out" />
             <p>Are you sure you want to donate ${piggybank.toFixed(2)} to the ACLU?</p>
             <div className="buttonContainer">
               <button className="mainButton" onClick={() => cashingOut()}>Yes, I'm Sure!</button>
@@ -39,6 +40,7 @@ function Contribution({ linking, location, history, piggybank, cashingOut }) {
         <Route path="/cashout/confirm-naturecon" render={() => (
           <div>
             <h2>Confirmation</h2>
+            <img className="piggy-icon" src={piggybankRemoveIMG} alt="Cash out" />
             <p>Are you sure you want to donate ${piggybank.toFixed(2)} to the Nature Conservatory?</p>
             <div className="buttonContainer">
               <button className="mainButton" onClick={() => cashingOut()}>Yes, I'm Sure!</button>
@@ -49,6 +51,7 @@ function Contribution({ linking, location, history, piggybank, cashingOut }) {
         <Route path="/cashout/confirm-deposit" render={() => (
           <div>
             <h2>Confirmation</h2>
+            <img className="piggy-icon" src={piggybankRemoveIMG} alt="Cash out" />
             <p>Are you sure you want to deposit ${piggybank.toFixed(2)} into your savings?</p>
             <div className="buttonContainer">
               <button className="mainButton" onClick={() => cashingOut()}>Yes, I'm Sure!</button>
