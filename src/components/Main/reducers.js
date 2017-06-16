@@ -79,6 +79,7 @@ function piggybank(state = 0, action) {
   switch (action.type) {
     case actions.ADD_TRANSACTIONS:
       return action.payload;
+    case actions.LOGOUT:
     case actions.AUTH_FAILED:
     case plaidActions.CASHING_OUT:
     case plaidActions.CASH_OUT:
