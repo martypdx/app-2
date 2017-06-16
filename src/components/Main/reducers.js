@@ -41,8 +41,10 @@ function token(state = null, action) {
 function linking(state = false, action) {
   switch (action.type) {
     case plaidActions.LINKING_ACCOUNT:
+    case plaidActions.CASHING_OUT:
       return true;
     case plaidActions.LINK_ACCOUNT:
+    case plaidActions.CASH_OUT:
       return false;
     default:
       return state;
@@ -78,6 +80,7 @@ function piggybank(state = 0, action) {
     case actions.ADD_TRANSACTIONS:
       return action.payload;
     case actions.AUTH_FAILED:
+    case plaidActions.CASHING_OUT:
     case plaidActions.CASH_OUT:
       return 0;
     default:

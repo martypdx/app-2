@@ -2,16 +2,21 @@ import React from 'react';
 import ATM from '../../photos/illustrationATM.png';
 import { connect } from 'react-redux';
 import { cashingOut } from '../Plaid/actions';
-import { Switch, Route, Link, withRouter } from 'react-router-dom';
+import { Switch, Route, Link, Redirect, withRouter } from 'react-router-dom';
+import ContributionLoading from './ContributionLoading';
+import '../../css/Contribution.css';
 
-function Contribution({ location, history, piggybank }) {
+function Contribution({ linking, location, history, piggybank }) {
+  if (linking) return <ContributionLoading />;
+  if (piggybank == 0) return <Redirect to="/success" />;
   return (
     <div>
       <Switch>
         <Route path="/cashout/options" component={() => (
-          <div>
+          <div className="Contribution">
             <img src={ATM} alt="Cash out" />
             <h2>Nice job!</h2>
+            <h3>${piggybank.toFixed(2)}</h3>
             <p>Ready to cash out ${piggybank.toFixed(2)}?</p>
             <p>Choose one of the options below:</p>
             <div className="buttonContainer">
@@ -59,6 +64,7 @@ function Contribution({ location, history, piggybank }) {
 export default withRouter(connect(
   state => ({
     user: state.user,
+    linking: state.linking,
     piggybank: state.piggybank
   }),
   dispatch => ({

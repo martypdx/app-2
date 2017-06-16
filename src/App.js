@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './css/App.css';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import LandingPage from './components/Main/LandingPage';
@@ -7,6 +6,7 @@ import Onboard from './components/Onboard';
 import Home from './components/Home';
 import Auth from './components/Main/Auth';
 import Contribution from './components/HomeViews/Contribution';
+import Success from './components/HomeViews/Success';
 import { checkForToken } from './components/Main/actions';
 import {
   BrowserRouter as Router,
@@ -14,6 +14,7 @@ import {
   Switch
 } from 'react-router-dom';
 import { connect } from 'react-redux';
+import './css/App.css';
 
 class App extends Component {
   componentDidMount() {
@@ -34,6 +35,7 @@ class App extends Component {
             }
             <Route path="/home" component={Home} />
             <Route path='/cashout' component={Contribution} />
+            <Route path='/success' component={Success} />
           </Switch>
           <Footer />
         </div>
