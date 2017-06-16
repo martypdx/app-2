@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import piglogo from '../../photos/pigLogo.png';
 import { connect } from 'react-redux';
 var ProgressBar = require('progressbar.js');
 
@@ -41,7 +40,6 @@ class PiggyBank extends Component {
     let { piggybank } = this.props;
     return (
       <div>
-        {/*<img src={piglogo} className="backpack" alt="backpack" />*/}
         <div id='container'>
           {/*<p style={{
             color: '#0d97ff',

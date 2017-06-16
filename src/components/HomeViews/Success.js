@@ -1,8 +1,7 @@
 import React from 'react';
 import ATM from '../../photos/illustrationATM.png';
 import { connect } from 'react-redux';
-import { cashingOut } from '../Plaid/actions';
-import { Switch, Route, Link, withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import '../../css/Contribution.css';
 
 function Success({ location, history, piggybank }) {
