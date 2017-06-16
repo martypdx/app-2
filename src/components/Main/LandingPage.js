@@ -16,7 +16,8 @@ function LandingPage() {
       <div className="welcomeHome">
         <h1 className="dash-trailing">This is Good Cents.</h1>
         <p className="landing-text">Let us turn your spare change into big savings....automatically!</p>
-
+      </div>
+      <div className="savings-wrapper">
         <span className="savings-wrapper">
           <span ><img className="item-icons" src={coffee} /></span>
           <span className="savings-text" >Daily Coffee: $3.25<img className="item-icons arrow" src={arrow} />save .75 <img className="item-icons arrow" src={arrow} />$273 yearly savings</span><br></br>
@@ -32,7 +33,7 @@ function LandingPage() {
       <div className="welcomeHome welcomeHome-alt">
         <h1 className="dash-trailing">Treat Yourself.</h1>
         <p className="landing-text">Our users save an average of <b className="money">$860</b>.  What will you do with all of your Good Cents?</p>
-      <Link to="/auth/signup" className="hard-sell">Sign Up Now</Link>
+        <Link to="/auth/signup" className="hard-sell">Sign Up Now</Link>
       </div>
     </div>
   );

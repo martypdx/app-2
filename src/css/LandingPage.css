@@ -15,7 +15,7 @@ font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
   line-height: 25px;
   margin: 0 auto;
-padding: 20px 30px 90px;
+padding: 20px 30px;
   height: 100%;
   width: 100%
 }
@@ -45,6 +45,10 @@ margin:25px;
     margin-bottom: 20px 15px;
     width: 200px; 
     margin: 0 auto;
+}
+
+.savings-wrapper{
+  background-color:rgb(252, 251, 249)
 }
 
 .landing-text{
