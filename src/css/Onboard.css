@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script');
 
 .About {
-color: #0d97ff;
-font-family: 'Source Sans Pro', sans-serif;
-line-height: 1.6em;
+    color: #0d97ff;
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.6em;
 }
 
 .About img {
@@ -12,41 +12,41 @@ line-height: 1.6em;
 }
 
 .About h2 {
-font-family: 'Dancing Script';
-color: grey;
-width: 50vw;
-margin: 20px auto;
+    font-family: 'Dancing Script';
+    color: grey;
+    width: 50vw;
+    margin: 20px auto;
 }
 
 .About p {
-margin: 20px auto;
-padding: 0 10%;
+    margin: 20px auto;
+    padding: 0 10%;
 }
 
 div .slider-decorator-2 {
-height: 5vh;
-bottom: none;
+    height: 5vh;
+    bottom: none;
 }
 
 div .slider-decorator-1 {
-display: block;
-margin: 170px 30px;
-color: lightgray;
+    display: block;
+    margin: 170px 30px;
+    color: lightgray;
 }
 
 div .slider-decorator-0 {
-display: block;
-margin: 170px 30px;
-color: lightgray;
+    display: block;
+    margin: 170px 30px;
+    color: lightgray;
 }
 
 .carousel-img{
-padding: 10px;
+    padding: 10px;
 }
 
 .carousel-text{
- font-family: 'Source Sans Pro', sans-serif;
- color: rgb(8, 175, 142);
+    font-family: 'Source Sans Pro', sans-serif;
+    color: rgb(8, 175, 142);
 }
 
 .mainButton{
@@ -76,10 +76,10 @@ padding: 10px;
 }
 
 .sign-in-up{
-background-color: #fcefe5;
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.81'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-max-height: 375px;
-padding: 50px;
+    background-color: rgba(241, 219, 202, 1);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.81'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    max-height: 375px;
+    padding: 50px;
 }
 
 .sign-in-label{
