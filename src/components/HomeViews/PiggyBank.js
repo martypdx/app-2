@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 var ProgressBar = require('progressbar.js');
 
 class PiggyBank extends Component {
-
   componentDidMount() {
 
     var bar = new ProgressBar.Circle('#container', {
@@ -29,7 +28,7 @@ class PiggyBank extends Component {
         if (value === 0) {
           circle.setText('');
         } else {
-          circle.setText('You\'ve Saved');
+          circle.setText('$3.26');
         }
 
       }
@@ -44,10 +43,10 @@ class PiggyBank extends Component {
       <div>
         {/*<img src={piglogo} className="backpack" alt="backpack" />*/}
         <div id='container'>
-          <p style={{
+          {/*<p style={{
             color: '#0d97ff',
             fontSize: '2em',
-          }}>${piggybank.toFixed(2)}</p>
+          }}>${piggybank.toFixed(2)}</p>*/}
         </div>
       </div>
     );

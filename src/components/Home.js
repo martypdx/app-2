@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../css/Home.css';
 import Transactions from './HomeViews/Transactions';
 import PiggyBank from './HomeViews/PiggyBank';
+import User from './HomeViews/User';
 import {
   Redirect,
   Link,
@@ -14,22 +15,20 @@ import { checkForToken } from './Main/actions';
 class Home extends Component {
   render() {
     const { user } = this.props;
-
     if (!user) return <Redirect to="/" />;
     return (
       <section>
         <div className="Home">
           <div className="PiggyContainer">
             <PiggyBank />
-          </div>
-          <div className="UserContainer">
-            <div className="UserBox">
-              <h2>{user.name}</h2>
-              <h3>{user.email}</h3>
-            </div>
             <div className="ButtonsContainer">
               <div className="ButtonsBox"><Link to='/cashout/options'><button className="mainButton">Ready to Donate?</button></Link></div>
               <div className="ButtonsBox"><Link to='/cashout/options'><button className="mainButton">Ready to Cash Out?</button></Link></div>
+            </div>
+          </div>
+          <div className="UserContainer">
+            <div className="UserBox">
+              <User />
             </div>
           </div>
           <div className="LineGraphContainer">
