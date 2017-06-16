@@ -25,6 +25,7 @@ class Home extends Component {
               <div className="ButtonsBox"><Link to='/cashout/options'><button className="mainButton">Ready to Donate?</button></Link></div>
               <div className="ButtonsBox"><Link to='/cashout/options'><button className="mainButton">Ready to Cash Out?</button></Link></div>
             </div>
+            <p>Last Cash Out: </p>
           </div>
           <div className="UserContainer">
             <div className="UserBox">

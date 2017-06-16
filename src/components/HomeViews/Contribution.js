@@ -45,7 +45,7 @@ function Contribution({ location, history, piggybank }) {
           <div>
             <h2>Confirmation</h2>
             <p>Are you sure you want to deposit ${piggybank.toFixed(2)} into your savings?</p>
-            <div class="buttonContainer">
+            <div className="buttonContainer">
               <button className="mainButton" onClick={() => cashingOut()}>Yes, I'm Sure!</button>
               <Link to="/cashout/options"><button className="mainButton">No, Take Me Back</button></Link>
             </div>

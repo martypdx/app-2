@@ -18,7 +18,7 @@ function User({ user, accounts }) {
           {user.email}
         </div>
         <div className="profile-userbuttons">
-          {accounts
+          {user.plaid.accounts
             ? <button type="button" className="btn btn-success btn-sm">Accounts Linked</button>
             : <button type="button" className="btn btn-danger btn-sm">Accounts Not Linked</button>
           }
