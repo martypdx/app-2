@@ -7,8 +7,9 @@ line-height: 1.6em;
 }
 
 .About img {
-max-width: 60vw;
-max-height: 60vh;
+max-width: 80vw;
+max-height: 80vh;
+width: 45%;
 }
 
 .About h2 {
@@ -61,11 +62,11 @@ font-size: 15px;
 font-family: "CalibreSemibold", helvetica, sans-serif;
 letter-spacing: 0.5px;
 max-height: 40px;
-    line-height: 40px;
-    padding: 10px, 25px;
-    text-transform: capitalize;
-    border: none;
-    border-radius: 5px;
+line-height: 40px;
+padding: 10px, 25px;
+text-transform: capitalize;
+border: none;
+border-radius: 5px;
 }
 
 .onboard-text{
@@ -75,8 +76,8 @@ max-height: 40px;
 .sign-in-up{
 background-color: #fcefe5;
 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.81'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-max-height: 400px;
-padding: 50px 60px;
+max-height: 375px;
+padding: 50px;
 }
 
 .sign-in-label{
