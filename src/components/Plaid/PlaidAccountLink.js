@@ -11,6 +11,7 @@ const handler = Plaid.create({
   product: ['transactions'],
   key: process.env.REACT_APP_PLAID_PUBLIC_KEY,
   onSuccess: function (public_token) {
+    // this makes a lot of sense, nice work!
     store.dispatch(linkAccount(public_token));
   },
   onExit: function (err, metadata) {

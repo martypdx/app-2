@@ -7,6 +7,9 @@ import { Switch, Route, Link, Redirect, withRouter } from 'react-router-dom';
 import ContributionLoading from './ContributionLoading';
 import '../../css/Contribution.css';
 
+// the render content for individual routes should be moved to individual components
+// (or probably one share components)...
+
 function Contribution({ linking, location, history, piggybank, cashingOut }) {
   if (linking) return <ContributionLoading />;
   if (!piggybank) return <Redirect to="/success" />;

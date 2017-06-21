@@ -19,6 +19,7 @@ class Transactions extends Component {
         <h1 className="headers">Transactions</h1>
         <ul className="applist">
           {this.props.transactions &&
+          /* why not display all transactions? If you need paging, that goes on server */
             this.props.transactions.slice(0, 5).map((trans, i) => {
               return <Transaction
                 key={i}

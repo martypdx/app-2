@@ -7,6 +7,7 @@ import { signout } from './Main/actions';
 import GOODCENTS from '../photos/GOODCENTS.svg';
 
 function NavBar({ user, signout }) {
+  // But how does this work if I resize my window? :)
   if (window.innerWidth < 500) return <MobileNav />;
 
   return (

@@ -43,8 +43,6 @@ class Home extends Component {
 }
 
 export default withRouter(connect(
-  state => ({ user: state.user }),
-  dispatch => ({
-    checkForToken() { dispatch(checkForToken()); }
-  })
+  state => ({ user: state.user })
+  // dispatch not used
 )(Home));

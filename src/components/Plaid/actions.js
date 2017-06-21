@@ -1,4 +1,5 @@
 import plaidAPI from '../../api/plaidAPI';
+// why separate actions files, but one constants file?
 import * as action from '../Main/constants';
 export const LINK_ACCOUNT = 'LINK_ACCOUNT';
 export const LINKING_ACCOUNT = 'LINKING_ACCOUNT';
@@ -17,6 +18,9 @@ export function linkAccount(public_token) {
   };
 }
 
+// hmm, this doesn't belong in the app. transaction totals 
+// would need to be managed on the server. Especially when
+// you not really fetching all the transactions...
 export function getTransactions(access_token) {
   return dispatch => {
     plaidAPI.getTransactions(access_token)
